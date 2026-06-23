@@ -32,6 +32,13 @@ import Footer from '../components/Footer.astro';
     <FloatingWhatsApp />
     <Footer />
     
-    <script type="module" src="/src/scripts/aos.js"></script>
+    <script>
+  import AOS from 'aos';
+
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
   </body>
 </html>
