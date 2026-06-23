@@ -1,0 +1,55 @@
+---
+const testimonials = [
+  {
+    name: "Mariana Costa",
+    text: "Atendimento maravilhoso! Ambiente lindo e profissionais incríveis."
+  },
+  {
+    name: "Juliana Souza",
+    text: "Me senti muito bem cuidada. O salão é elegante e aconchegante."
+  },
+  {
+    name: "Fernanda Lima",
+    text: "Simplesmente amei o resultado. Com certeza voltarei!"
+  }
+];
+---
+
+<section
+  data-aos="fade-up"
+  class="bg-[#111111] text-white py-24 px-6"
+>
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-16">
+      <span class="text-yellow-500 uppercase tracking-[0.3em] text-sm">
+        Depoimentos
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-4">
+        O que nossas clientes dizem
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {testimonials.map((item) => (
+        <div
+          class="bg-black p-8 rounded-3xl border border-yellow-500/20 hover:border-yellow-500 transition"
+        >
+          <div class="text-yellow-500 text-3xl mb-6">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-300 leading-relaxed mb-8">
+            "{item.text}"
+          </p>
+
+          <h3 class="text-xl font-bold text-yellow-500">
+            {item.name}
+          </h3>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

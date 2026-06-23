@@ -1,0 +1,92 @@
+---
+const reasons = [
+  {
+    icon: "✧",
+    title: "Beleza com Propósito",
+    text: "Sua autoestima é valorizada em cada detalhe, com cuidado, elegância e atenção especial.",
+  },
+  {
+    icon: "❀",
+    title: "Experiência Sensorial",
+    text: "Um ambiente pensado para proporcionar conforto, bem-estar e momentos únicos.",
+  },
+  {
+    icon: "♙",
+    title: "Profissionais de Excelência",
+    text: "Atendimento cuidadoso para realçar sua beleza com sofisticação e qualidade.",
+  },
+  {
+    icon: "▣",
+    title: "Ambiente Sofisticado",
+    text: "Um espaço elegante, acolhedor e preparado para tornar sua experiência especial.",
+  },
+  {
+    icon: "✓",
+    title: "Sempre Com Você",
+    text: "Atendimento próximo, humano e pensado para cada cliente se sentir única.",
+  },
+];
+---
+
+<section
+  data-aos="fade-up"
+  class="bg-black text-white py-24 px-6"
+>
+  <div class="max-w-7xl mx-auto text-center">
+
+    <span class="text-yellow-500 uppercase tracking-[0.35em] text-sm font-medium">
+      Por que escolher
+    </span>
+
+    <h2 class="font-luxury text-5xl md:text-6xl font-semibold text-white mt-4 mb-4">
+      Ana's Beauty Shop
+    </h2>
+
+    <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-16 leading-relaxed">
+      Entenda por que somos a escolha de quem busca sofisticação, cuidado e beleza com propósito.
+    </p>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+
+      {reasons.map((item) => (
+        <div
+          class="group relative min-h-80 rounded-3xl border border-yellow-500/20 bg-[#080808] overflow-hidden cursor-pointer"
+        >
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center p-8 transition-all duration-500 group-hover:-translate-y-10 group-hover:opacity-0"
+          >
+            <div class="text-6xl text-yellow-500 mb-8">
+              {item.icon}
+            </div>
+
+            <h3 class="font-luxury text-3xl font-semibold text-yellow-400 leading-tight">
+              {item.title}
+            </h3>
+          </div>
+
+          <div
+            class="absolute inset-0 bg-[#8a561f] p-8 flex flex-col items-center justify-center text-center opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+          >
+            <h3 class="font-luxury text-3xl font-semibold text-white mb-5 leading-tight">
+              {item.title}
+            </h3>
+
+            <p class="text-white/90 leading-relaxed">
+              {item.text}
+            </p>
+          </div>
+        </div>
+      ))}
+
+    </div>
+
+    <a
+      href="https://wa.me/554733663992"
+      target="_blank"
+      class="inline-block mt-16 bg-yellow-500 text-black px-10 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:scale-105 transition-all duration-300"
+    >
+      Agende sua experiência exclusiva
+    </a>
+
+  </div>
+</section>

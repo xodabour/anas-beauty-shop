@@ -1,0 +1,53 @@
+---
+const photos = [
+  '/images/gallery/01.jpg',
+  '/images/gallery/02.jpg',
+  '/images/gallery/03.jpg',
+  '/images/gallery/04.jpg',
+  '/images/gallery/05.jpg',
+  '/images/gallery/06.jpg',
+];
+---
+
+<section
+  data-aos="zoom-in"
+  class="bg-black text-white py-24 px-6"
+>
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-16">
+      <span class="text-yellow-500 uppercase tracking-[0.3em] text-sm">
+        Nossa Galeria
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-4">
+        Inspire-se com nossos trabalhos
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      {photos.map((photo) => (
+        <div
+          class="relative rounded-3xl overflow-hidden group h-80"
+        >
+          <img
+            src={photo}
+            alt="Ana's Beauty Shop"
+            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex items-end p-8"
+          >
+            <span
+              class="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold"
+            >
+              Ver Mais
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

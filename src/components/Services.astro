@@ -1,0 +1,89 @@
+---
+const services = [
+  {
+    title: "Bem-Estar",
+    image: "/images/services/bem-estar.jpg",
+    text: "Massagens, terapias relaxantes e estímulos sensoriais para renovar e equilibrar corpo e mente.",
+  },
+  {
+    title: "Cabelo",
+    image: "/images/services/cabelo.jpg",
+    text: "Cuidados completos para fios mais bonitos, saudáveis e alinhados à sua beleza.",
+  },
+  {
+    title: "Cílios",
+    image: "/images/services/cilios.jpg",
+    text: "Técnicas precisas para destacar o olhar com volume, definição e acabamento impecável.",
+  },    
+  {
+  title: "Maquiagem",
+  image: "/images/services/maquiagem.jpg",
+  text: "Produções sofisticadas para eventos, festas e ocasiões especiais, realçando sua beleza com elegância.",
+},
+  {
+    title: "Pele",
+    image: "/images/services/pele.jpg",
+    text: "Cuidados personalizados para uma pele limpa, iluminada e saudável.",
+  },
+  {
+    title: "Saúde Capilar",
+    image: "/images/services/saude-capilar.jpg",
+    text: "Protocolos capilares para fortalecer, tratar e devolver vida aos fios.",
+  },
+  {
+    title: "Sobrancelhas",
+    image: "/images/services/sobrancelhas.jpg",
+    text: "Design e modelagem para realçar sua expressão natural.",
+  },
+  {
+    title: "Unhas",
+    image: "/images/services/unhas.jpg",
+    text: "Unhas impecáveis com acabamento elegante e cuidado em cada detalhe.",
+  },
+];
+---
+
+<section
+  id="servicos"
+  data-aos="fade-up"
+  class="bg-black text-white py-24 px-6"
+>
+  <div class="max-w-7xl mx-auto text-center">
+
+    <span class="text-[#8a561f] uppercase tracking-[0.35em] text-sm font-medium">
+      Nossos Serviços
+    </span>
+
+    <h2 class="font-luxury text-5xl md:text-6xl font-semibold text-[#8a561f] mt-4 mb-4">
+      Nossos Serviços
+    </h2>
+
+    <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-14 leading-relaxed">
+      Da pele ao cabelo, cada detalhe é cuidado com sofisticação, produtos de alta
+      performance e profissionais que entendem o seu estilo.
+    </p>
+
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      {services.map((service) => (
+        <article class="group">
+         <div class="overflow-hidden rounded-2xl mb-6 border border-yellow-500/20 shadow-2xl shadow-black/40">
+            <img
+              src={service.image}
+              alt={service.title}
+              class="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
+            />
+          </div>
+
+          <h3 class="font-luxury text-3xl font-semibold text-yellow-400 mb-4">
+            {service.title}
+          </h3>
+
+          <p class="text-lg leading-relaxed text-gray-300">
+            {service.text}
+          </p>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
