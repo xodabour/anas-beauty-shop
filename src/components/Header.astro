@@ -6,36 +6,16 @@
     <div class="grid grid-cols-3 items-center">
       <nav class="hidden md:flex items-center gap-8 text-white font-medium">
         <a href="#inicio" class="hover:text-yellow-500 transition">Início</a>
-
-        <div class="relative group">
-          <button class="hover:text-yellow-500 transition flex items-center gap-1">
-            Serviços <span>⌄</span>
-          </button>
-
-          <div class="fixed left-0 top-[80px] w-full opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 hover:opacity-100 hover:visible hover:translate-y-0 transition-all duration-300 grid grid-cols-4 bg-black/95 border-t border-yellow-500/20">
-            {[
-              ['Bem-estar', 'Massagens, terapias e muito mais.'],
-              ['Cabelos', 'Cortes, coloração e tratamentos.'],
-              ['Cílios', 'Alongamentos e curvaturas.'],
-              ['Lábios', 'Cor e volume para seus lábios.'],
-              ['Pele', 'Cuidados personalizados.'],
-              ['Saúde Capilar', 'Protocolos exclusivos.'],
-              ['Sobrancelhas', 'Modelagem e design.'],
-              ['Unhas', 'Acabamento elegante.'],
-            ].map(([title, text]) => (
-              <a href="#servicos" class="min-h-64 p-8 bg-[#111111] hover:bg-yellow-500/20 border border-yellow-500/10 transition">
-                <h3 class="text-4xl font-bold text-white mb-4">{title}</h3>
-                <p class="text-gray-300 text-lg">{text}</p>
-                <span class="inline-block mt-8 bg-white text-black px-6 py-3 rounded font-semibold">Saiba mais</span>
-              </a>
-            ))}
-          </div>
-        </div>
+        <a href="#servicos" class="hover:text-yellow-500 transition">Serviços</a>
       </nav>
 
       <div class="flex justify-center col-start-2">
         <a href="#inicio">
-          <img src="/images/logo-dourada.png" alt="Ana's Beauty Shop" class="h-16 object-contain" />
+          <img
+            src="/images/logo-dourada.png"
+            alt="Ana's Beauty Shop"
+            class="h-16 object-contain"
+          />
         </a>
       </div>
 
@@ -46,7 +26,7 @@
 
       <button
         id="menuButton"
-        class="md:hidden col-start-3 justify-self-end text-yellow-500 text-3xl"
+        class="md:hidden col-start-3 justify-self-end text-yellow-500 text-4xl leading-none"
         aria-label="Abrir menu"
       >
         ☰
@@ -55,42 +35,78 @@
   </div>
 
   <div
+    id="menuOverlay"
+    class="md:hidden fixed inset-0 bg-black/70 opacity-0 invisible transition-all duration-300"
+  ></div>
+
+  <aside
     id="mobileMenu"
-    class="md:hidden fixed top-[80px] right-0 w-full bg-black/95 border-t border-yellow-500/20 text-white opacity-0 invisible -translate-y-4 transition-all duration-300"
+    class="md:hidden fixed top-0 right-0 h-screen w-[82%] max-w-sm bg-black text-white border-l border-yellow-500/20 translate-x-full transition-transform duration-500 ease-in-out z-50"
   >
-    <nav class="flex flex-col p-6 gap-5 text-lg font-medium">
-      <a href="#inicio" class="mobile-link hover:text-yellow-500 transition">Início</a>
-      <a href="#servicos" class="mobile-link hover:text-yellow-500 transition">Serviços</a>
-      <a href="#sobre" class="mobile-link hover:text-yellow-500 transition">Sobre Nós</a>
-      <a href="#contato" class="mobile-link hover:text-yellow-500 transition">Contato</a>
+    <div class="flex items-center justify-between px-7 py-6 border-b border-yellow-500/20">
+      <img
+        src="/images/logo-dourada.png"
+        alt="Ana's Beauty Shop"
+        class="h-14 object-contain"
+      />
+
+      <button
+        id="closeMenu"
+        class="text-yellow-500 text-4xl leading-none"
+        aria-label="Fechar menu"
+      >
+        ×
+      </button>
+    </div>
+
+    <nav class="flex flex-col text-center px-8 py-8 gap-6 text-lg font-medium">
+      <a href="#inicio" class="mobile-link text-white hover:text-yellow-500 transition">Início</a>
+      <a href="#servicos" class="mobile-link text-white hover:text-yellow-500 transition">Cabelo</a>
+      <a href="#servicos" class="mobile-link text-white hover:text-yellow-500 transition">Cílios</a>
+      <a href="#servicos" class="mobile-link text-white hover:text-yellow-500 transition">Maquiagem</a>
+      <a href="#servicos" class="mobile-link text-white hover:text-yellow-500 transition">Saúde Capilar</a>
+      <a href="#servicos" class="mobile-link text-white hover:text-yellow-500 transition">Sobrancelhas</a>
+      <a href="#servicos" class="mobile-link text-white hover:text-yellow-500 transition">Unhas</a>
+      <a href="#sobre" class="mobile-link text-white hover:text-yellow-500 transition">Sobre Nós</a>
+      <a href="#contato" class="mobile-link text-white hover:text-yellow-500 transition">Contato</a>
 
       <a
         href="https://wa.me/554733663992"
         target="_blank"
-        class="bg-yellow-500 text-black px-6 py-3 rounded-full text-center font-semibold mt-4"
+        class="bg-yellow-500 text-black px-6 py-4 rounded-full text-center font-bold mt-3 shadow-xl shadow-yellow-500/20"
       >
         Agendar pelo WhatsApp
       </a>
     </nav>
-  </div>
+  </aside>
 </header>
 
 <script>
   const menuButton = document.getElementById("menuButton");
+  const closeMenu = document.getElementById("closeMenu");
   const mobileMenu = document.getElementById("mobileMenu");
+  const menuOverlay = document.getElementById("menuOverlay");
   const links = document.querySelectorAll(".mobile-link");
   const siteHeader = document.getElementById("siteHeader");
 
-  menuButton?.addEventListener("click", () => {
-    mobileMenu?.classList.toggle("opacity-0");
-    mobileMenu?.classList.toggle("invisible");
-    mobileMenu?.classList.toggle("-translate-y-4");
-  });
+  function openMenu() {
+    mobileMenu?.classList.remove("translate-x-full");
+    menuOverlay?.classList.remove("opacity-0", "invisible");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMobileMenu() {
+    mobileMenu?.classList.add("translate-x-full");
+    menuOverlay?.classList.add("opacity-0", "invisible");
+    document.body.style.overflow = "";
+  }
+
+  menuButton?.addEventListener("click", openMenu);
+  closeMenu?.addEventListener("click", closeMobileMenu);
+  menuOverlay?.addEventListener("click", closeMobileMenu);
 
   links.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu?.classList.add("opacity-0", "invisible", "-translate-y-4");
-    });
+    link.addEventListener("click", closeMobileMenu);
   });
 
   window.addEventListener("scroll", () => {

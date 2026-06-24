@@ -1,11 +1,6 @@
 ---
 const services = [
   {
-    title: "Bem-Estar",
-    image: "/images/services/bem-estar.jpg",
-    text: "Massagens, terapias relaxantes e estímulos sensoriais para renovar e equilibrar corpo e mente.",
-  },
-  {
     title: "Cabelo",
     image: "/images/services/cabelo.jpg",
     text: "Cuidados completos para fios mais bonitos, saudáveis e alinhados à sua beleza.",
@@ -14,16 +9,11 @@ const services = [
     title: "Cílios",
     image: "/images/services/cilios.jpg",
     text: "Técnicas precisas para destacar o olhar com volume, definição e acabamento impecável.",
-  },    
+  },
   {
-  title: "Maquiagem",
-  image: "/images/services/maquiagem.jpg",
-  text: "Produções sofisticadas para eventos, festas e ocasiões especiais, realçando sua beleza com elegância.",
-},
-  {
-    title: "Pele",
-    image: "/images/services/pele.jpg",
-    text: "Cuidados personalizados para uma pele limpa, iluminada e saudável.",
+    title: "Maquiagem",
+    image: "/images/services/maquiagem.jpg",
+    text: "Produções sofisticadas para eventos, festas e ocasiões especiais, realçando sua beleza com elegância.",
   },
   {
     title: "Saúde Capilar",
@@ -59,14 +49,14 @@ const services = [
     </h2>
 
     <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-14 leading-relaxed">
-      Da pele ao cabelo, cada detalhe é cuidado com sofisticação, produtos de alta
+      Do cabelo às unhas, cada detalhe é cuidado com sofisticação, produtos de alta
       performance e profissionais que entendem o seu estilo.
     </p>
 
-    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((service) => (
         <article class="group">
-         <div class="overflow-hidden rounded-2xl mb-6 border border-yellow-500/20 shadow-2xl shadow-black/40">
+          <div class="overflow-hidden rounded-2xl mb-6 border border-yellow-500/20 shadow-2xl shadow-black/40">
             <img
               src={service.image}
               alt={service.title}
