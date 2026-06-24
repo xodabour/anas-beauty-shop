@@ -1,0 +1,85 @@
+---
+const team = [
+  {
+    name: "Jeise Schroeder",
+    role: "Especialista em Cabelos",
+    image: "/images/team/01.jpeg",
+    text:
+      "Especialista em cabelos, cortes, escovas, colorações e tratamentos capilares. Seu compromisso é valorizar a beleza de cada cliente com técnica, cuidado e um atendimento personalizado.",
+  },
+  {
+    name: "Adriana Borille",
+    role: "Especialista em Maquiagem",
+    image: "/images/team/02.jpeg",
+    text:
+      "Especialista em maquiagem social e produções para ocasiões especiais, Adriana transforma cada detalhe em uma experiência de beleza e autoestima. Seu olhar atento, técnica refinada e paixão pelo que faz garantem resultados que valorizam a personalidade e a elegância de cada cliente.",
+  },
+  {
+    name: "Gleice Pessoa",
+    role: "Especialista em Unhas",
+    image: "/images/team/03.jpeg",
+    text:
+      "Especialista em manicure e cuidados das unhas, Gleice une técnica, delicadeza e atenção aos detalhes para proporcionar unhas impecáveis e elegantes. Seu compromisso é oferecer uma experiência de cuidado e bem-estar, valorizando a beleza e a autoestima de cada cliente.",
+  },
+];
+---
+
+<section
+  id="equipe"
+  data-aos="fade-up"
+  class="bg-black text-white py-24 px-6"
+>
+  <div class="max-w-7xl mx-auto text-center">
+
+    <span class="text-yellow-500 uppercase tracking-[0.35em] text-sm font-medium">
+      Nossa Equipe
+    </span>
+
+    <h2 class="font-luxury text-5xl md:text-6xl font-semibold text-white mt-4 mb-4">
+      Conheça nossas especialistas
+    </h2>
+
+    <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-16 leading-relaxed">
+      Profissionais que unem técnica, cuidado e paixão por realçar a beleza de cada cliente.
+    </p>
+
+    <div class="grid gap-10 md:grid-cols-3">
+
+      {team.map((person) => (
+        <article
+          class="group bg-[#0b0b0b] rounded-3xl border border-yellow-500/20 overflow-hidden hover:border-yellow-400 transition duration-300"
+        >
+
+          <!-- Foto -->
+          <div class="bg-[#111] flex justify-center items-center p-6">
+            <img
+              src={person.image}
+              alt={person.name}
+              class="max-h-[500px] w-auto object-contain group-hover:scale-105 transition duration-700"
+            />
+          </div>
+
+          <!-- Conteúdo -->
+          <div class="p-8">
+            <h3 class="font-luxury text-3xl font-semibold text-yellow-400 mb-3">
+              {person.name}
+            </h3>
+
+            <span
+              class="inline-block border border-yellow-500/40 text-yellow-400 px-5 py-2 rounded-full text-sm font-semibold mb-5"
+            >
+              {person.role}
+            </span>
+
+            <p class="text-gray-300 leading-relaxed">
+              {person.text}
+            </p>
+          </div>
+
+        </article>
+      ))}
+
+    </div>
+
+  </div>
+</section>

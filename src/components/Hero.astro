@@ -1,36 +1,70 @@
 <section
   id="inicio"
-  class="relative min-h-screen flex items-center overflow-hidden"
+  class="relative min-h-screen overflow-hidden bg-black md:flex md:items-center"
 >
-  <!-- Imagem de fundo -->
+  <!-- Desktop -->
   <div
-    class="absolute inset-0 bg-cover bg-center scale-105"
-    style="background-image: url('/images/hero-salao.jpg');"
+    class="hidden md:block absolute inset-0 bg-cover bg-center scale-105"
+    style="background-image: url('/images/hero-salao.png');"
   ></div>
 
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black/65"></div>
+  <div class="hidden md:block absolute inset-0 bg-black/65"></div>
+  <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
 
-  <!-- Gradiente -->
-  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+  <!-- Mobile -->
+  <div class="md:hidden pt-24 bg-black">
+    <!-- Foto da equipe -->
+    <div class="relative bg-black flex justify-center items-center px-4 overflow-hidden">
+      <img
+        src="/images/hero-salao.png"
+        alt="Equipe Ana's Beauty Shop"
+        class="w-full max-h-[520px] object-contain"
+      />
 
-  <!-- Conteúdo -->
-  <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+      <!-- Gradiente maior e mais suave -->
+      <div
+        class="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-black via-black/80 to-transparent"
+      ></div>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="bg-black text-center px-7 pb-16 -mt-16 relative z-10">
+      <span class="text-yellow-400 uppercase tracking-[0.35em] text-xs font-medium">
+        ANA'S BEAUTY SHOP
+      </span>
+
+      <h1 class="font-luxury text-white text-4xl font-semibold leading-tight mt-5 mb-6">
+        Sua beleza merece a melhor das experiências
+      </h1>
+
+      <p class="text-gray-300 text-lg leading-relaxed mb-8">
+        Cada detalhe é pensado para realçar sua essência com sofisticação,
+        cuidado e elegância.
+      </p>
+
+      <a
+        href="https://wa.me/554733663992"
+        target="_blank"
+        class="inline-block w-full bg-yellow-500 text-black px-8 py-4 rounded-full font-bold uppercase shadow-xl shadow-yellow-500/25"
+      >
+        Agende sua experiência
+      </a>
+    </div>
+  </div>
+
+  <!-- Desktop -->
+  <div class="hidden md:block relative z-10 max-w-7xl mx-auto px-8 w-full">
     <div class="max-w-4xl">
-
-      <!-- Texto pequeno -->
       <span class="text-yellow-400 uppercase tracking-[0.45em] text-sm font-medium">
         ANA'S BEAUTY SHOP
       </span>
 
-      <!-- Título -->
       <h1
         class="font-luxury text-white text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mt-6 max-w-4xl"
       >
         Sua beleza merece uma experiência inesquecível.
       </h1>
 
-      <!-- Descrição -->
       <p
         class="text-gray-200 text-lg md:text-xl mt-8 mb-12 max-w-2xl leading-relaxed"
       >
@@ -38,44 +72,22 @@
         Balneário Camboriú.
       </p>
 
-      <!-- Botões -->
       <div class="flex flex-col sm:flex-row gap-5">
-
         <a
           href="https://wa.me/554733663992"
           target="_blank"
-          class="bg-yellow-500 text-black px-10 py-4 rounded-full font-semibold text-center
-          hover:bg-yellow-400 hover:scale-105
-          transition-all duration-300
-          shadow-lg shadow-yellow-500/30"
+          class="bg-yellow-500 text-black px-10 py-4 rounded-full font-semibold text-center hover:bg-yellow-400 hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-500/30"
         >
           Agendar pelo WhatsApp
         </a>
 
         <a
           href="#servicos"
-          class="border border-yellow-500 text-yellow-400 px-10 py-4 rounded-full
-          font-semibold text-center
-          hover:bg-yellow-500 hover:text-black hover:scale-105
-          transition-all duration-300"
+          class="border border-yellow-500 text-yellow-400 px-10 py-4 rounded-full font-semibold text-center hover:bg-yellow-500 hover:text-black hover:scale-105 transition-all duration-300"
         >
           Conheça nossos serviços
         </a>
-
       </div>
-
-      <!-- Seta -->
-      <a
-        href="#sobre"
-        class="hidden md:flex items-center gap-3 mt-20 text-white/80 hover:text-yellow-400 transition"
-      >
-        <span class="animate-bounce text-2xl">↓</span>
-
-        <span class="uppercase tracking-[0.25em] text-xs">
-          Descubra mais
-        </span>
-      </a>
-
     </div>
   </div>
 </section>

@@ -1,11 +1,11 @@
 ---
 const photos = [
-  '/images/gallery/01.jpg',
-  '/images/gallery/02.jpg',
-  '/images/gallery/03.jpg',
-  '/images/gallery/04.jpg',
-  '/images/gallery/05.jpg',
-  '/images/gallery/06.jpg',
+  { src: '/images/gallery/01.jpeg', type: 'unhas' },
+  { src: '/images/gallery/02.jpeg', type: 'unhas' },
+  { src: '/images/gallery/03.jpeg', type: 'unhas' },
+  { src: '/images/gallery/04.jpeg', type: 'cabelo' },
+  { src: '/images/gallery/05.jpeg', type: 'cabelo' },
+  { src: '/images/gallery/06.jpeg', type: 'cabelo' },
 ];
 ---
 
@@ -20,20 +20,29 @@ const photos = [
         Nossa Galeria
       </span>
 
-      <h2 class="text-4xl md:text-5xl font-bold mt-4">
+      <h2 class="font-luxury text-5xl md:text-6xl font-semibold mt-4">
         Inspire-se com nossos trabalhos
       </h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-6">
+
       {photos.map((photo) => (
         <div
-          class="relative rounded-3xl overflow-hidden group h-80"
+          class={`relative rounded-3xl overflow-hidden group ${
+            photo.type === 'cabelo'
+              ? 'h-[500px]'
+              : 'h-[260px]'
+          }`}
         >
           <img
-            src={photo}
+            src={photo.src}
             alt="Ana's Beauty Shop"
-            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+            class={`w-full h-full group-hover:scale-110 transition duration-700 ${
+              photo.type === 'cabelo'
+                ? 'object-cover object-top'
+                : 'object-cover'
+            }`}
           />
 
           <div
@@ -47,6 +56,7 @@ const photos = [
           </div>
         </div>
       ))}
+
     </div>
 
   </div>
