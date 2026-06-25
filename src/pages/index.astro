@@ -1,12 +1,14 @@
 ---
 import '../styles/global.css';
 import 'aos/dist/aos.css';
+
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Services from '../components/Services.astro';
 import WhyChoose from '../components/WhyChoose.astro';
 import Team from '../components/Team.astro';
+import Location from '../components/Location.astro';
 import Gallery from '../components/Gallery.astro';
 import Testimonials from '../components/Testimonials.astro';
 import CTA from '../components/CTA.astro';
@@ -18,29 +20,52 @@ import Footer from '../components/Footer.astro';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ana's Beauty Shop</title>
+
+    <title>Ana's Beauty Shop | Salão de Beleza em Balneário Camboriú</title>
+
+    <meta
+      name="description"
+      content="Ana's Beauty Shop em Balneário Camboriú. Especialistas em cabelos, depilação, maquiagem, saúde capilar, sobrancelhas e unhas."
+    />
+
+    <meta
+      name="keywords"
+      content="salão de beleza Balneário Camboriú, cabeleireiro, manicure, maquiagem, depilação, sobrancelha, saúde capilar"
+    />
+
+    <meta name="author" content="Ana's Beauty Shop" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Ana's Beauty Shop" />
+    <meta property="og:description" content="Salão de beleza em Balneário Camboriú especializado em cabelos, depilação, maquiagem, saúde capilar, sobrancelhas e unhas." />
+    <meta property="og:image" content="/images/hero-salao.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <link rel="icon" href="/images/logo-dourada.png" />
   </head>
 
- <body>
-  <Header />
-  <Hero />
-  <About />
-  <Services />
-  <WhyChoose />
-  <Team />
-  <Gallery />
-  <Testimonials />
-  <CTA />
-  <Footer />
-  <FloatingWhatsApp />
+  <body>
+    <Header />
+    <Hero />
+    <About />
+    <Services />
+    <WhyChoose />
+    <Team />
+    <Location />
+    <Gallery />
+    <Testimonials />
+    <CTA />
+    <Footer />
+    <FloatingWhatsApp />
 
-  <script>
-    import AOS from 'aos';
+    <script>
+      import AOS from 'aos';
 
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  </script>
-</body>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
 </html>
