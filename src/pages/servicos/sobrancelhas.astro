@@ -11,6 +11,7 @@ import DiferenciaisServico from "../../components/services/DiferenciaisServico.a
 import ComoFuncionaServico from "../../components/services/ComoFuncionaServico.astro";
 import GoogleReviews from "../../components/services/GoogleReviews.astro";
 import FAQServico from "../../components/services/FAQServico.astro";
+import ServicosRelacionados from "../../components/services/ServicosRelacionados.astro";
 import CTAAgendamento from "../../components/services/CTAAgendamento.astro";
 import MapaServico from "../../components/services/MapaServico.astro";
 
@@ -36,6 +37,10 @@ const servico = servicos.sobrancelhas;
   <ComoFuncionaServico servico={servico} />
   <GoogleReviews />
   <FAQServico servico={servico} />
+
+  <ServicosRelacionados atual={servico.slug} />
+
+
   <CTAAgendamento servico={servico} />
   <MapaServico />
 </MainLayout>
