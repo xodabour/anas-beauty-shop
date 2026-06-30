@@ -1,0 +1,66 @@
+---
+const { servico } = Astro.props;
+---
+
+<section class="bg-[#080808] text-white py-24 px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="text-center mb-16">
+
+      <span class="text-yellow-500 uppercase tracking-[0.35em] text-sm">
+        Perguntas Frequentes
+      </span>
+
+      <h2 class="font-luxury text-4xl md:text-5xl font-semibold mt-4">
+        Tire suas dúvidas
+      </h2>
+
+      <p class="text-gray-300 mt-6 max-w-3xl mx-auto text-lg">
+        Separamos algumas respostas para as dúvidas mais comuns sobre nossos
+        serviços.
+      </p>
+
+    </div>
+
+    <div class="space-y-6">
+
+      {servico.faq.map((item) => (
+
+        <details
+          class="group bg-black border border-yellow-500/20 rounded-3xl p-6 open:border-yellow-500 transition-all"
+        >
+
+          <summary
+            class="flex items-center justify-between cursor-pointer list-none"
+          >
+
+            <h3
+              class="font-semibold text-lg md:text-xl text-yellow-400 pr-4"
+            >
+              {item.pergunta}
+            </h3>
+
+            <span
+              class="text-yellow-500 text-3xl group-open:rotate-45 transition-transform duration-300"
+            >
+              +
+            </span>
+
+          </summary>
+
+          <div class="mt-6 border-t border-yellow-500/10 pt-6">
+
+            <p class="text-gray-300 leading-relaxed">
+              {item.resposta}
+            </p>
+
+          </div>
+
+        </details>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>

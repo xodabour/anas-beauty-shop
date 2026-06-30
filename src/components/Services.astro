@@ -2,31 +2,37 @@
 const services = [
   {
     title: "Cabelo",
+    slug: "cabelo",
     image: "/images/services/cabelo.jpg",
     text: "Cuidados completos para fios mais bonitos, saudáveis e alinhados à sua beleza.",
   },
   {
     title: "Depilação",
+    slug: "depilacao",
     image: "/images/services/depilacao.jpg",
     text: "Técnicas de depilação que proporcionam conforto, suavidade e uma pele bem cuidada, valorizando sua beleza e bem-estar.",
   },
   {
     title: "Maquiagem",
+    slug: "maquiagem",
     image: "/images/services/maquiagem.jpg",
     text: "Produções sofisticadas para eventos, festas e ocasiões especiais, realçando sua beleza com elegância.",
   },
   {
     title: "Saúde Capilar",
+    slug: "saude-capilar",
     image: "/images/services/saude-capilar.jpg",
     text: "Protocolos capilares para fortalecer, tratar e devolver vida aos fios.",
   },
   {
     title: "Sobrancelhas",
+    slug: "sobrancelhas",
     image: "/images/services/sobrancelhas.jpg",
     text: "Design e modelagem para realçar sua expressão natural.",
   },
   {
     title: "Unhas",
+    slug: "unhas",
     image: "/images/services/unhas.jpg",
     text: "Unhas impecáveis com acabamento elegante e cuidado em cada detalhe.",
   },
@@ -48,29 +54,44 @@ const services = [
     </h2>
 
     <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-14 leading-relaxed">
-      Do cabelo à depilação, cada detalhe é cuidado com sofisticação, produtos de alta
-      performance e profissionais que entendem o seu estilo.
+      Do cabelo à depilação, cada detalhe é cuidado com sofisticação, produtos de alta performance e profissionais que entendem o seu estilo.
     </p>
 
     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
       {services.map((service) => (
-        <article class="group">
-          <div class="overflow-hidden rounded-2xl mb-6 border border-yellow-500/20 shadow-2xl shadow-black/40">
-            <img
-              src={service.image}
-              alt={service.title}
-              class="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
-            />
-          </div>
+        <a
+          href={`/servicos/${service.slug}`}
+          class="group block text-left"
+        >
+          <article class="h-full">
 
-          <h3 class="font-luxury text-3xl font-semibold text-yellow-400 mb-4">
-            {service.title}
-          </h3>
+            <div class="overflow-hidden rounded-2xl mb-6 border border-yellow-500/20 shadow-2xl shadow-black/40">
+              <img
+                src={service.image}
+                alt={service.title}
+                class="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
 
-          <p class="text-lg leading-relaxed text-gray-300">
-            {service.text}
-          </p>
-        </article>
+            <h3 class="font-luxury text-3xl font-semibold text-yellow-400 mb-4">
+              {service.title}
+            </h3>
+
+            <p class="text-lg leading-relaxed text-gray-300 mb-6">
+              {service.text}
+            </p>
+
+            <span
+              class="inline-flex items-center gap-2 text-yellow-400 font-semibold group-hover:text-yellow-300 transition"
+            >
+              Saiba mais
+              <span class="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </span>
+
+          </article>
+        </a>
       ))}
     </div>
 

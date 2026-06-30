@@ -1,0 +1,51 @@
+---
+const { servico } = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-gradient-to-r from-[#8a561f] via-[#b8860b] to-[#8a561f] py-24 px-6">
+
+  <!-- brilho de fundo -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+    <div class="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-5xl mx-auto text-center">
+
+    <span class="uppercase tracking-[0.35em] text-black/70 font-semibold text-sm">
+      Agendamento
+    </span>
+
+    <h2 class="font-luxury text-4xl md:text-6xl text-black font-semibold mt-5">
+      Pronta para transformar sua beleza?
+    </h2>
+
+    <p class="text-black/80 text-lg md:text-xl mt-8 leading-relaxed max-w-3xl mx-auto">
+      Nossa equipe está pronta para receber você em um ambiente sofisticado,
+      acolhedor e pensado para proporcionar uma experiência única.
+      Agende seu horário e descubra por que tantas clientes escolhem
+      o Ana's Beauty Shop.
+    </p>
+
+    <div class="mt-12 flex flex-col sm:flex-row justify-center gap-5">
+
+      <a
+        href={servico.whatsapp}
+        target="_blank"
+        class="bg-black text-white px-10 py-5 rounded-full font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl"
+      >
+        Agendar pelo WhatsApp
+      </a>
+
+      <a
+        href="/#contato"
+        class="border-2 border-black text-black px-10 py-5 rounded-full font-semibold text-lg hover:bg-black hover:text-white transition-all duration-300"
+      >
+        Ver localização
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

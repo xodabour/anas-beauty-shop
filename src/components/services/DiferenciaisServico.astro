@@ -1,0 +1,74 @@
+---
+const { servico } = Astro.props;
+---
+
+<section class="bg-[#080808] text-white py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-16">
+
+      <span class="text-yellow-500 uppercase tracking-[0.35em] text-sm">
+        Nossos diferenciais
+      </span>
+
+      <h2 class="font-luxury text-4xl md:text-5xl font-semibold mt-4">
+        Por que escolher a Ana's Beauty Shop?
+      </h2>
+
+      <p class="text-gray-300 max-w-3xl mx-auto mt-6 text-lg leading-relaxed">
+        Muito mais do que um salão de beleza. Oferecemos uma experiência completa,
+        unindo atendimento personalizado, ambiente sofisticado e profissionais
+        apaixonadas pelo que fazem.
+      </p>
+
+    </div>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      {servico.diferenciais.map((item) => (
+
+        <article
+          class="group rounded-3xl bg-black border border-yellow-500/20 p-8 hover:border-yellow-500 transition-all duration-500 hover:-translate-y-2"
+        >
+
+          <div
+            class="w-20 h-20 rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center mb-8 group-hover:bg-yellow-500 group-hover:text-black transition-all duration-500"
+          >
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-9 h-9"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+
+          </div>
+
+          <h3
+            class="font-luxury text-3xl text-yellow-400 mb-5 group-hover:text-yellow-300 transition"
+          >
+            {item.titulo}
+          </h3>
+
+          <p
+            class="text-gray-300 leading-relaxed"
+          >
+            {item.texto}
+          </p>
+
+        </article>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>

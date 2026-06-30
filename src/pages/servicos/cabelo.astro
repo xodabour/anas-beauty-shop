@@ -1,0 +1,41 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+import HeroServico from "../../components/services/HeroServico.astro";
+import EstatisticasServico from "../../components/services/EstatisticasServico.astro";
+import BreadcrumbServico from "../../components/services/BreadcrumbServico.astro";
+import IntroducaoServico from "../../components/services/IntroducaoServico.astro";
+import CardsServicos from "../../components/services/CardsServicos.astro";
+import GaleriaServico from "../../components/services/GaleriaServico.astro";
+import DiferenciaisServico from "../../components/services/DiferenciaisServico.astro";
+import ComoFuncionaServico from "../../components/services/ComoFuncionaServico.astro";
+import GoogleReviews from "../../components/services/GoogleReviews.astro";
+import FAQServico from "../../components/services/FAQServico.astro";
+import CTAAgendamento from "../../components/services/CTAAgendamento.astro";
+import MapaServico from "../../components/services/MapaServico.astro";
+
+import { servicos } from "../../data/servicos";
+
+const servico = servicos.cabelo;
+---
+
+<MainLayout
+  title={servico.tituloSeo}
+  description={servico.descricaoSeo}
+  keywords="cabeleireiro Balneário Camboriú, corte feminino Balneário Camboriú, escova, coloração, luzes, mechas, morena iluminada, hidratação capilar, progressiva"
+  image={servico.imagemHero}
+  canonical={`https://www.anasbeautyshop.com.br/servicos/${servico.slug}`}
+>
+  <HeroServico servico={servico} />
+  <EstatisticasServico servico={servico} />
+  <BreadcrumbServico servico={servico} />
+  <IntroducaoServico servico={servico} />
+  <CardsServicos servico={servico} />
+  <GaleriaServico servico={servico} />
+  <DiferenciaisServico servico={servico} />
+  <ComoFuncionaServico servico={servico} />
+  <GoogleReviews />
+  <FAQServico servico={servico} />
+  <CTAAgendamento servico={servico} />
+   <MapaServico />
+</MainLayout>

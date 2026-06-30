@@ -1,0 +1,36 @@
+---
+const { servico } = Astro.props;
+---
+
+<section class="bg-[#080808] border-b border-yellow-500/10">
+  <div class="max-w-7xl mx-auto px-6 py-5">
+
+    <nav
+      class="flex items-center gap-2 text-sm text-gray-400"
+      aria-label="Breadcrumb"
+    >
+      <a
+        href="/"
+        class="hover:text-yellow-500 transition"
+      >
+        Início
+      </a>
+
+      <span>/</span>
+
+      <a
+        href="/#servicos"
+        class="hover:text-yellow-500 transition"
+      >
+        Serviços
+      </a>
+
+      <span>/</span>
+
+      <span class="text-yellow-500">
+        {servico.nome}
+      </span>
+    </nav>
+
+  </div>
+</section>

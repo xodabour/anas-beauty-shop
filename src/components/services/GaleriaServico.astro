@@ -1,0 +1,36 @@
+---
+const { servico } = Astro.props;
+---
+
+<section class="bg-[#080808] text-white py-24 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="text-center mb-16">
+      <span class="text-yellow-500 uppercase tracking-[0.35em] text-sm">
+        Galeria
+      </span>
+
+      <h2 class="font-luxury text-4xl md:text-5xl font-semibold mt-4">
+        Inspire-se
+      </h2>
+
+      <p class="text-gray-300 mt-6 max-w-3xl mx-auto text-lg">
+        Alguns dos trabalhos realizados pela nossa equipe.
+        Em breve esta galeria será atualizada constantemente com novos resultados.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      {servico.galeria.map((imagem) => (
+        <div class="overflow-hidden rounded-3xl border border-yellow-500/20">
+          <img
+            src={imagem}
+            alt={`Resultado de ${servico.nome} no Ana's Beauty Shop`}
+            class="w-full h-56 md:h-64 object-cover hover:scale-110 transition duration-700"
+          />
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

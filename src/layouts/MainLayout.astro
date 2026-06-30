@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const {
+  title = "Ana's Beauty Shop | Salão de Beleza em Balneário Camboriú",
+  description = "Ana's Beauty Shop em Balneário Camboriú. Especialistas em cabelos, depilação, maquiagem, saúde capilar, sobrancelhas e unhas.",
+  keywords = "salão de beleza Balneário Camboriú, cabeleireiro, manicure, maquiagem, depilação, sobrancelha, saúde capilar",
+  image = "/images/hero-salao.png",
+  canonical = "https://www.anasbeautyshop.com.br",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Ana's Beauty Shop" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/images/logo-dourada.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={canonical} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+  </head>
+
+  <body class="bg-black text-white">
+    <Header />
+
+    <slot />
+
+    <Footer />
+    <FloatingWhatsApp />
+  </body>
+</html>

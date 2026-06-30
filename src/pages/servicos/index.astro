@@ -1,0 +1,80 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { servicos } from "../../data/servicos";
+
+const listaServicos = [
+  servicos.cabelo,
+  servicos.depilacao,
+  servicos.unhas,
+  servicos.maquiagem,
+  servicos.sobrancelhas,
+  servicos.saudeCapilar,
+];
+---
+
+<MainLayout
+  title="Serviços | Ana's Beauty Shop em Balneário Camboriú"
+  description="Conheça os serviços do Ana's Beauty Shop em Balneário Camboriú: cabelo, depilação, unhas, maquiagem, sobrancelhas e saúde capilar."
+  keywords="serviços salão de beleza Balneário Camboriú, cabelo, depilação, unhas, maquiagem, sobrancelhas, saúde capilar"
+  canonical="https://www.anasbeautyshop.com.br/servicos"
+>
+  <main class="bg-black text-white">
+
+    <section class="pt-36 pb-20 px-6 bg-[#050505]">
+      <div class="max-w-7xl mx-auto text-center">
+        <span class="text-yellow-500 uppercase tracking-[0.35em] text-sm">
+          Ana's Beauty Shop
+        </span>
+
+        <h1 class="font-luxury text-5xl md:text-7xl font-semibold mt-6">
+          Nossos Serviços
+        </h1>
+
+        <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mt-6 leading-relaxed">
+          Conheça nossos principais serviços de beleza em Balneário Camboriú,
+          realizados com cuidado, sofisticação e atendimento personalizado.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-24 px-6 bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {listaServicos.map((servico) => (
+            <a
+              href={`/servicos/${servico.slug}`}
+              class="group block bg-[#111111] rounded-3xl overflow-hidden border border-yellow-500/20 hover:border-yellow-500 transition-all duration-500 hover:-translate-y-2"
+            >
+              <div class="overflow-hidden">
+                <img
+                  src={servico.imagemDestaque}
+                  alt={servico.nome}
+                  class="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
+                />
+              </div>
+
+              <div class="p-8">
+                <span class="text-yellow-500 uppercase tracking-[0.25em] text-xs">
+                  Serviço
+                </span>
+
+                <h2 class="font-luxury text-4xl text-yellow-400 mt-3 mb-5">
+                  {servico.nome}
+                </h2>
+
+                <p class="text-gray-300 leading-relaxed mb-8">
+                  {servico.subtitulo}
+                </p>
+
+                <span class="inline-block bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold group-hover:bg-yellow-400 transition">
+                  Saiba mais
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+  </main>
+</MainLayout>

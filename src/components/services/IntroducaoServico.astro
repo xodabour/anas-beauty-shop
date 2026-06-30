@@ -1,0 +1,37 @@
+---
+const { servico } = Astro.props;
+---
+
+<section class="bg-[#080808] text-white py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <span class="text-yellow-500 uppercase tracking-[0.3em] text-sm">
+          Sobre o serviço
+        </span>
+
+        <h2 class="font-luxury text-4xl md:text-5xl font-semibold mt-4 mb-8">
+          Cuidados especiais para {servico.nome.toLowerCase()}
+        </h2>
+
+        <div class="space-y-6">
+          {servico.introducao.map((paragrafo) => (
+            <p class="text-gray-300 text-lg leading-relaxed">
+              {paragrafo}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden border border-yellow-500/20 shadow-2xl shadow-black/50">
+        <img
+          src={servico.imagemDestaque}
+          alt={servico.titulo}
+          class="w-full h-[360px] md:h-[460px] object-cover"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
