@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
+
 export const maquiagem: Procedimento = {
   slug: "maquiagem",
 
@@ -21,11 +23,11 @@ export const maquiagem: Procedimento = {
 
   imagemDestaque: "/images/services/maquiagem.jpg",
 
-  preco: "R$ 150,00",
+  preco: precos.maquiagem,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma maquiagem."
-),
+    "Olá! Gostaria de agendar uma maquiagem."
+  ),
 
   introducao: [
     "A maquiagem profissional é ideal para quem deseja valorizar a beleza e conquistar um acabamento impecável em ocasiões especiais.",

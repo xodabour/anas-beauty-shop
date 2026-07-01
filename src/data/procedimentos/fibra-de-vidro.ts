@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const fibraDeVidro: Procedimento = {
   slug: "fibra-de-vidro",
@@ -22,11 +23,11 @@ export const fibraDeVidro: Procedimento = {
 
   imagemDestaque: "/images/services/unhas.jpg",
 
-  preco: "R$ 190,00",
+  preco: precos.fibraDeVidro,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma colocação de fribra de vidro."
-),
+    "Olá! Gostaria de agendar uma colocação de fibra de vidro."
+  ),
 
   introducao: [
     "A fibra de vidro é uma técnica de alongamento indicada para quem deseja unhas mais longas, resistentes e com aparência elegante.",

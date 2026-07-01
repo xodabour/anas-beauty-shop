@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const hidratacao: Procedimento = {
   slug: "hidratacao",
@@ -22,11 +23,11 @@ export const hidratacao: Procedimento = {
 
   imagemDestaque: "/images/services/cabelo.jpg",
 
-  preco: "Sob avaliação",
+  preco: precos.avaliacao,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma hidratação capilar."
-),
+    "Olá! Gostaria de agendar uma hidratação capilar."
+  ),
 
   introducao: [
     "A hidratação capilar é indicada para cabelos ressecados, opacos, ásperos ou sem movimento.",

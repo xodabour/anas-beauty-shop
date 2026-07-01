@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const manicure: Procedimento = {
   slug: "manicure",
@@ -22,11 +23,11 @@ export const manicure: Procedimento = {
 
   imagemDestaque: "/images/services/unhas.jpg",
 
-  preco: "R$ 40,00",
+  preco: precos.manicure,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma manicure."
-),
+    "Olá! Gostaria de agendar uma manicure."
+  ),
 
   introducao: [
     "A manicure tradicional é ideal para quem deseja manter as unhas das mãos bonitas, limpas e bem cuidadas.",

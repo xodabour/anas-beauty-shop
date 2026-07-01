@@ -1,4 +1,5 @@
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const comboDepilacao = {
   slug: "combo-depilacao",
@@ -21,7 +22,7 @@ export const comboDepilacao = {
 
   imagemDestaque: "/images/services/depilacao.jpg",
 
-  preco: "R$ 230,00",
+  preco: precos.comboDepilacao,
 
   whatsapp: config.whatsapp(
     "Olá! Gostaria de agendar um Combo de Depilação."

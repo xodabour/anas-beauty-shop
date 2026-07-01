@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const penteados: Procedimento = {
   slug: "penteados",
@@ -22,11 +23,11 @@ export const penteados: Procedimento = {
 
   imagemDestaque: "/images/services/cabelo.jpg",
 
-  preco: "Sob avaliação",
+  preco: precos.avaliacao,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar um penteado."
-),
+    "Olá! Gostaria de agendar um penteado."
+  ),
 
   introducao: [
     "Os penteados são ideais para quem deseja uma produção especial, elegante e bem finalizada para eventos importantes.",

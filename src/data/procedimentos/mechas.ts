@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const mechas: Procedimento = {
   slug: "mechas",
@@ -22,11 +23,11 @@ export const mechas: Procedimento = {
 
   imagemDestaque: "/images/services/cabelo.jpg",
 
-  preco: "Sob avaliação",
+  preco: precos.avaliacao,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma avaliação de mechas."
-),
+    "Olá! Gostaria de agendar uma avaliação de mechas."
+  ),
 
   introducao: [
     "As mechas são uma excelente opção para quem deseja iluminar o visual, criar profundidade nos fios e trazer mais movimento ao cabelo.",

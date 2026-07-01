@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const depilacaoVirilha: Procedimento = {
   slug: "depilacao-virilha",
@@ -22,11 +23,11 @@ export const depilacaoVirilha: Procedimento = {
 
   imagemDestaque: "/images/services/depilacao.jpg",
 
-  preco: "Consulte",
+  preco: precos.depilacaoVirilha,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma depilação de verilha."
-),
+    "Olá! Gostaria de agendar uma depilação de virilha."
+  ),
 
   introducao: [
     "A depilação de virilha é um procedimento procurado por quem deseja mais conforto, higiene e sensação de pele bem cuidada.",

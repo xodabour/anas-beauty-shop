@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const coloracao: Procedimento = {
   slug: "coloracao",
@@ -22,11 +23,11 @@ export const coloracao: Procedimento = {
 
   imagemDestaque: "/images/services/cabelo.jpg",
 
-  preco: "Sob avaliação",
+  preco: precos.avaliacao,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma coloração."
-),
+    "Olá! Gostaria de agendar uma coloração."
+  ),
 
   introducao: [
     "A coloração transforma o visual, renova a autoestima e valoriza a beleza natural.",

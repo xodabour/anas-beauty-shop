@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const corte: Procedimento = {
   slug: "corte",
@@ -22,11 +23,11 @@ export const corte: Procedimento = {
 
   imagemDestaque: "/images/services/cabelo.jpg",
 
-  preco: "Sob avaliação",
+  preco: precos.avaliacao,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar um corte feminino."
-),
+    "Olá! Gostaria de agendar um corte feminino."
+  ),
 
   introducao: [
     "O corte feminino é uma forma de renovar o visual, valorizar os traços e trazer mais praticidade para o dia a dia.",

@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const terapiaPodal: Procedimento = {
   slug: "terapia-podal",
@@ -22,11 +23,11 @@ export const terapiaPodal: Procedimento = {
 
   imagemDestaque: "/images/services/unhas.jpg",
 
-  preco: "R$ 95,00",
+  preco: precos.terapiaPodal,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma terapia podal."
-),
+    "Olá! Gostaria de agendar uma terapia podal."
+  ),
 
   introducao: [
     "A terapia podal é um cuidado especializado voltado para a saúde, conforto e bem-estar dos pés.",

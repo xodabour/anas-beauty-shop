@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const pedicure: Procedimento = {
   slug: "pedicure",
@@ -22,11 +23,11 @@ export const pedicure: Procedimento = {
 
   imagemDestaque: "/images/services/unhas.jpg",
 
-  preco: "R$ 45,00",
+  preco: precos.pedicure,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma pedicure."
-),
+    "Olá! Gostaria de agendar uma pedicure."
+  ),
 
   introducao: [
     "A pedicure tradicional é ideal para manter os pés bonitos, bem cuidados e com aparência saudável.",

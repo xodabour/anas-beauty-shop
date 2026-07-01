@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const depilacaoGluteos: Procedimento = {
   slug: "depilacao-gluteos",
@@ -22,11 +23,11 @@ export const depilacaoGluteos: Procedimento = {
 
   imagemDestaque: "/images/services/depilacao.jpg",
 
-  preco: "R$ 50,00",
+  preco: precos.depilacaoGluteos,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma depilação de gluteos."
-),
+    "Olá! Gostaria de agendar uma depilação de glúteos."
+  ),
 
   introducao: [
     "A depilação de glúteos é indicada para quem deseja uma pele mais lisa, uniforme e com sensação prolongada de cuidado.",

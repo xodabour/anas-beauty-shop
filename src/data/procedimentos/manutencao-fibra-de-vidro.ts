@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const manutencaoFibraDeVidro: Procedimento = {
   slug: "manutencao-fibra-de-vidro",
@@ -22,11 +23,11 @@ export const manutencaoFibraDeVidro: Procedimento = {
 
   imagemDestaque: "/images/services/unhas.jpg",
 
-  preco: "R$ 160,00",
+  preco: precos.manutencaoFibraDeVidro,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma manutenção de fibra de vidro."
-),
+    "Olá! Gostaria de agendar uma manutenção de fibra de vidro."
+  ),
 
   introducao: [
     "A manutenção da fibra de vidro é essencial para preservar a beleza, resistência e segurança do alongamento.",

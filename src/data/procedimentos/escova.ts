@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const escova: Procedimento = {
   slug: "escova",
@@ -22,11 +23,11 @@ export const escova: Procedimento = {
 
   imagemDestaque: "/images/services/cabelo.jpg",
 
-  preco: "Sob avaliação",
+  preco: precos.avaliacao,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma escova."
-),
+    "Olá! Gostaria de agendar uma escova."
+  ),
 
   introducao: [
     "A escova é um dos serviços mais procurados para quem deseja cabelos alinhados, com brilho e movimento natural.",

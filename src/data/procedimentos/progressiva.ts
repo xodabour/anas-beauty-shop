@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
+
 export const progressiva: Procedimento = {
   slug: "progressiva",
 
@@ -21,11 +23,11 @@ export const progressiva: Procedimento = {
 
   imagemDestaque: "/images/services/cabelo.jpg",
 
-  preco: "Sob avaliação",
+  preco: precos.avaliacao,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma avaliação para progressiva."
-),
+    "Olá! Gostaria de agendar uma avaliação para progressiva."
+  ),
 
   introducao: [
     "A progressiva é indicada para quem deseja fios mais alinhados, com menos volume e mais praticidade na rotina.",

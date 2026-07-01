@@ -1,5 +1,6 @@
 import type { Procedimento } from "../../types/procedimento";
 import { config } from "../config";
+import { precos } from "../precos";
 
 export const depilacaoRosto: Procedimento = {
   slug: "depilacao-rosto",
@@ -22,11 +23,11 @@ export const depilacaoRosto: Procedimento = {
 
   imagemDestaque: "/images/services/depilacao.jpg",
 
-  preco: "R$ 50,00",
+  preco: precos.depilacaoRosto,
 
   whatsapp: config.whatsapp(
-  "Olá! Gostaria de agendar uma depilação de rosto."
-),
+    "Olá! Gostaria de agendar uma depilação de rosto."
+  ),
 
   introducao: [
     "A depilação facial remove os pelos indesejados de forma delicada, proporcionando uma pele mais uniforme e uma aparência mais limpa.",
