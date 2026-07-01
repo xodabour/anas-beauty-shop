@@ -1,4 +1,9 @@
 ---
+type ServicoOferecido = {
+  titulo: string;
+  texto: string;
+};
+
 const { servico } = Astro.props;
 ---
 
@@ -24,7 +29,7 @@ const { servico } = Astro.props;
 
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-      {servico.servicosOferecidos.map((item) => (
+      {servico.servicosOferecidos.map((item: ServicoOferecido) => (
 
         <article
           class="group bg-[#111111] rounded-3xl border border-yellow-500/20 p-8 hover:border-yellow-500 hover:-translate-y-2 transition-all duration-500"

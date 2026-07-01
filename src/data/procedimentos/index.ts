@@ -24,6 +24,11 @@ import { depilacaoPernaInteira } from "./depilacao-perna-inteira";
 import { depilacaoGluteos } from "./depilacao-gluteos";
 import { comboDepilacao } from "./combo-depilacao";
 
+import { designDeSobrancelhas } from "./design-de-sobrancelhas";
+import { designDeSobrancelhasComHenna } from "./design-de-sobrancelhas-com-henna";
+
+import { maquiagem } from "./maquiagem";
+
 export const procedimentos = {
   progressiva,
   mechas,
@@ -50,4 +55,9 @@ export const procedimentos = {
   depilacaoPernaInteira,
   depilacaoGluteos,
   comboDepilacao,
+
+  designDeSobrancelhas,
+  designDeSobrancelhasComHenna,
+
+  maquiagem,
 };

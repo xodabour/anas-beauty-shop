@@ -21,7 +21,7 @@ const { servico } = Astro.props;
     </div>
 
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-      {servico.galeria.map((imagem) => (
+      {servico.galeria.map((imagem: string) => (
         <div class="overflow-hidden rounded-3xl border border-yellow-500/20">
           <img
             src={imagem}

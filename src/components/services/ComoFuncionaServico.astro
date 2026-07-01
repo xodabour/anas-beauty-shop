@@ -1,4 +1,10 @@
 ---
+type Etapa = {
+  numero: string;
+  titulo: string;
+  texto: string;
+};
+
 const { servico } = Astro.props;
 ---
 
@@ -21,7 +27,7 @@ const { servico } = Astro.props;
     </div>
 
     <div class="grid gap-8 md:grid-cols-4">
-      {servico.etapas.map((item) => (
+      {servico.etapas.map((item: Etapa) => (
         <article class="relative bg-[#111111] border border-yellow-500/20 rounded-3xl p-8 hover:border-yellow-500 transition-all duration-500">
           <span class="block text-yellow-500 text-5xl font-bold mb-6">
             {item.numero}

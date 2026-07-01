@@ -1,4 +1,6 @@
-export const progressiva = {
+import type { Procedimento } from "../../types/procedimento";
+
+export const progressiva: Procedimento = {
   slug: "progressiva",
 
   categoria: "Cabelo",

@@ -16,7 +16,7 @@ const { servico } = Astro.props;
         </h2>
 
         <div class="space-y-6">
-          {servico.introducao.map((paragrafo) => (
+          {servico.introducao.map((paragrafo: string) => (
             <p class="text-gray-300 text-lg leading-relaxed">
               {paragrafo}
             </p>

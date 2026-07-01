@@ -149,7 +149,11 @@ const schema = {
     <meta name="twitter:image" content={image} />
 
     <!-- Schema.org -->
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(schema)}
+    />
   </head>
 
   <body class="bg-black text-white">
