@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const designDeSobrancelhasComHenna: Procedimento = {
@@ -20,9 +22,9 @@ export const designDeSobrancelhasComHenna: Procedimento = {
   subtitulo:
     "Sobrancelhas mais definidas, preenchidas e harmoniosas para valorizar sua beleza natural.",
 
-  imagemHero: "/images/services/sobrancelhas.jpg",
+  imagemHero: imagens.sobrancelhas,
 
-  imagemDestaque: "/images/services/sobrancelhas.jpg",
+  imagemDestaque: imagens.sobrancelhas,
 
   preco: precos.designSobrancelhasHenna,
 

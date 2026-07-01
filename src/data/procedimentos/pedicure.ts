@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const pedicure: Procedimento = {
@@ -19,9 +21,9 @@ export const pedicure: Procedimento = {
   subtitulo:
     "Cuidados especiais para os pés, com higiene, conforto e acabamento impecável.",
 
-  imagemHero: "/images/services/unhas.jpg",
+  imagemHero: imagens.unhas,
 
-  imagemDestaque: "/images/services/unhas.jpg",
+  imagemDestaque: imagens.unhas,
 
   preco: precos.pedicure,
 

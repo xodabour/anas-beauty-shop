@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const depilacaoVirilhaCompleta: Procedimento = {
@@ -21,9 +23,9 @@ export const depilacaoVirilhaCompleta: Procedimento = {
   subtitulo:
     "Mais conforto, liberdade e sensação de pele lisa com um atendimento cuidadoso e profissional.",
 
-  imagemHero: "/images/services/depilacao.jpg",
+  imagemHero: imagens.depilacao,
 
-  imagemDestaque: "/images/services/depilacao.jpg",
+  imagemDestaque: imagens.depilacao,
 
   preco: precos.depilacaoVirilhaCompleta,
 

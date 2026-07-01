@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const esmaltacaoEmGel: Procedimento = {
@@ -19,9 +21,9 @@ export const esmaltacaoEmGel: Procedimento = {
   subtitulo:
     "Mais brilho, maior durabilidade e unhas impecáveis por muito mais tempo.",
 
-  imagemHero: "/images/services/unhas.jpg",
+  imagemHero: imagens.unhas,
 
-  imagemDestaque: "/images/services/unhas.jpg",
+  imagemDestaque: imagens.unhas,
 
   preco: precos.esmaltacaoEmGel,
 

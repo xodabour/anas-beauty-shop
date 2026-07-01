@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const blindagem: Procedimento = {
@@ -19,9 +21,9 @@ export const blindagem: Procedimento = {
   subtitulo:
     "Proteção, resistência e brilho para quem deseja manter as unhas naturais sempre bonitas.",
 
-  imagemHero: "/images/services/unhas.jpg",
+  imagemHero: imagens.unhas,
 
-  imagemDestaque: "/images/services/unhas.jpg",
+  imagemDestaque: imagens.unhas,
 
   preco: precos.blindagem,
 

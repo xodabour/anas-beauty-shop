@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const manutencaoFibraDeVidro: Procedimento = {
@@ -19,9 +21,9 @@ export const manutencaoFibraDeVidro: Procedimento = {
   subtitulo:
     "Cuidados essenciais para manter suas unhas em fibra bonitas, resistentes e com acabamento impecável.",
 
-  imagemHero: "/images/services/unhas.jpg",
+  imagemHero: imagens.unhas,
 
-  imagemDestaque: "/images/services/unhas.jpg",
+  imagemDestaque: imagens.unhas,
 
   preco: precos.manutencaoFibraDeVidro,
 

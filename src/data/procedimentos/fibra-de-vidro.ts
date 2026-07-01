@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const fibraDeVidro: Procedimento = {
@@ -19,9 +21,9 @@ export const fibraDeVidro: Procedimento = {
   subtitulo:
     "Alongamento elegante, resistente e com acabamento natural para unhas mais bonitas e sofisticadas.",
 
-  imagemHero: "/images/services/unhas.jpg",
+  imagemHero: imagens.unhas,
 
-  imagemDestaque: "/images/services/unhas.jpg",
+  imagemDestaque: imagens.unhas,
 
   preco: precos.fibraDeVidro,
 

@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const terapiaPodal: Procedimento = {
@@ -19,9 +21,9 @@ export const terapiaPodal: Procedimento = {
   subtitulo:
     "Mais conforto, saúde e bem-estar para os seus pés com um atendimento cuidadoso e especializado.",
 
-  imagemHero: "/images/services/unhas.jpg",
+  imagemHero: imagens.unhas,
 
-  imagemDestaque: "/images/services/unhas.jpg",
+  imagemDestaque: imagens.unhas,
 
   preco: precos.terapiaPodal,
 

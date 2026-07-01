@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const maquiagem: Procedimento = {
@@ -19,9 +21,9 @@ export const maquiagem: Procedimento = {
   subtitulo:
     "Realce sua beleza com uma maquiagem personalizada para qualquer ocasião especial.",
 
-  imagemHero: "/images/services/maquiagem.jpg",
+  imagemHero: imagens.maquiagem,
 
-  imagemDestaque: "/images/services/maquiagem.jpg",
+  imagemDestaque: imagens.maquiagem,
 
   preco: precos.maquiagem,
 

@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const escova: Procedimento = {
@@ -19,9 +21,9 @@ export const escova: Procedimento = {
   subtitulo:
     "Fios alinhados, leves e com brilho para qualquer ocasião, realizados com técnica e produtos profissionais.",
 
-  imagemHero: "/images/services/cabelo.jpg",
+  imagemHero: imagens.cabelo,
 
-  imagemDestaque: "/images/services/cabelo.jpg",
+  imagemDestaque: imagens.cabelo,
 
   preco: precos.avaliacao,
 

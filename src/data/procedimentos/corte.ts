@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const corte: Procedimento = {
@@ -19,9 +21,9 @@ export const corte: Procedimento = {
   subtitulo:
     "Cortes pensados para valorizar seu formato de rosto, estilo pessoal e rotina com elegância e sofisticação.",
 
-  imagemHero: "/images/services/cabelo.jpg",
+  imagemHero: imagens.cabelo,
 
-  imagemDestaque: "/images/services/cabelo.jpg",
+  imagemDestaque: imagens.cabelo,
 
   preco: precos.avaliacao,
 

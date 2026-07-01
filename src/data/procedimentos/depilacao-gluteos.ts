@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const depilacaoGluteos: Procedimento = {
@@ -19,9 +21,9 @@ export const depilacaoGluteos: Procedimento = {
   subtitulo:
     "Procedimento realizado com discrição, higiene e conforto para uma pele mais lisa e bem cuidada.",
 
-  imagemHero: "/images/services/depilacao.jpg",
+  imagemHero: imagens.depilacao,
 
-  imagemDestaque: "/images/services/depilacao.jpg",
+  imagemDestaque: imagens.depilacao,
 
   preco: precos.depilacaoGluteos,
 

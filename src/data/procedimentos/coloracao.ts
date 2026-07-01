@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const coloracao: Procedimento = {
@@ -19,9 +21,9 @@ export const coloracao: Procedimento = {
   subtitulo:
     "Realce sua beleza com uma coloração personalizada, respeitando a saúde dos fios e o resultado que você deseja.",
 
-  imagemHero: "/images/services/cabelo.jpg",
+  imagemHero: imagens.cabelo,
 
-  imagemDestaque: "/images/services/cabelo.jpg",
+  imagemDestaque: imagens.cabelo,
 
   preco: precos.avaliacao,
 

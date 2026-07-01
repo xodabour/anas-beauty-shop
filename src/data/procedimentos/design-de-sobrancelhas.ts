@@ -1,5 +1,7 @@
 import type { Procedimento } from "../../types/procedimento";
+
 import { config } from "../config";
+import { imagens } from "../imagens";
 import { precos } from "../precos";
 
 export const designDeSobrancelhas: Procedimento = {
@@ -20,9 +22,9 @@ export const designDeSobrancelhas: Procedimento = {
   subtitulo:
     "Realce sua beleza com sobrancelhas desenhadas de forma personalizada para o seu rosto.",
 
-  imagemHero: "/images/services/sobrancelhas.jpg",
+  imagemHero: imagens.sobrancelhas,
 
-  imagemDestaque: "/images/services/sobrancelhas.jpg",
+  imagemDestaque: imagens.sobrancelhas,
 
   preco: precos.designSobrancelhas,
 
@@ -33,7 +35,7 @@ export const designDeSobrancelhas: Procedimento = {
   introducao: [
     "O design de sobrancelhas é um procedimento que valoriza o olhar através da modelagem personalizada dos fios, respeitando o formato natural do rosto.",
     "Cada atendimento é realizado de forma individual, buscando equilíbrio, simetria e um resultado que destaque a beleza de cada cliente.",
-    "No Ana's Beauty Shop, utilizamos técnicas que proporcionam um acabamento delicado, natural e harmonioso."
+    "No Ana's Beauty Shop, utilizizamos técnicas que proporcionam um acabamento delicado, natural e harmonioso."
   ],
 
   beneficios: [
