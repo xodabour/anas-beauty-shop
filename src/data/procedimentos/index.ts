@@ -14,6 +14,16 @@ import { manutencaoFibraDeVidro } from "./manutencao-fibra-de-vidro";
 import { blindagem } from "./blindagem";
 import { terapiaPodal } from "./terapia-podal";
 
+import { depilacaoVirilha } from "./depilacao-virilha";
+import { depilacaoVirilhaCompleta } from "./depilacao-virilha-completa";
+import { depilacaoBuco } from "./depilacao-buco";
+import { depilacaoAxila } from "./depilacao-axila";
+import { depilacaoRosto } from "./depilacao-rosto";
+import { depilacaoCoxa } from "./depilacao-coxa";
+import { depilacaoPernaInteira } from "./depilacao-perna-inteira";
+import { depilacaoGluteos } from "./depilacao-gluteos";
+import { comboDepilacao } from "./combo-depilacao";
+
 export const procedimentos = {
   progressiva,
   mechas,
@@ -30,4 +40,14 @@ export const procedimentos = {
   manutencaoFibraDeVidro,
   blindagem,
   terapiaPodal,
+
+  depilacaoVirilha,
+  depilacaoVirilhaCompleta,
+  depilacaoBuco,
+  depilacaoAxila,
+  depilacaoRosto,
+  depilacaoCoxa,
+  depilacaoPernaInteira,
+  depilacaoGluteos,
+  comboDepilacao,
 };
