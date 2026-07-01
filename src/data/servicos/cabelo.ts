@@ -1,3 +1,4 @@
+import { config } from "../config";
 export const cabelo = {
   slug: "cabelo",
 
@@ -24,8 +25,9 @@ export const cabelo = {
     "/images/services/cabelo.jpg",
   ],
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Encontrei o site da Ana's Beauty Shop e gostaria de agendar um horário para cabelo.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar um horario para cabelo."
+),
 
   introducao: [
     "No Ana's Beauty Shop, cada cabelo é tratado de forma única. Nosso atendimento começa com uma escuta cuidadosa para entender seu estilo, sua rotina, o histórico dos fios e o resultado que você deseja alcançar.",

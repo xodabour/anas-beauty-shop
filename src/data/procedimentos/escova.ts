@@ -1,4 +1,7 @@
-export const escova = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const escova: Procedimento = {
   slug: "escova",
 
   categoria: "Cabelo",
@@ -21,8 +24,9 @@ export const escova = {
 
   preco: "Sob avaliação",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma escova.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma escova."
+),
 
   introducao: [
     "A escova é um dos serviços mais procurados para quem deseja cabelos alinhados, com brilho e movimento natural.",

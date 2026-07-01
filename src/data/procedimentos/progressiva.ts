@@ -1,5 +1,5 @@
 import type { Procedimento } from "../../types/procedimento";
-
+import { config } from "../config";
 export const progressiva: Procedimento = {
   slug: "progressiva",
 
@@ -23,8 +23,9 @@ export const progressiva: Procedimento = {
 
   preco: "Sob avaliação",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma avaliação para progressiva.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma avaliação para progressiva."
+),
 
   introducao: [
     "A progressiva é indicada para quem deseja fios mais alinhados, com menos volume e mais praticidade na rotina.",

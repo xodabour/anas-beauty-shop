@@ -1,3 +1,5 @@
+import { config } from "../config";
+
 export const comboDepilacao = {
   slug: "combo-depilacao",
 
@@ -21,8 +23,9 @@ export const comboDepilacao = {
 
   preco: "R$ 230,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar o Combo de Depilação.",
+  whatsapp: config.whatsapp(
+    "Olá! Gostaria de agendar um Combo de Depilação."
+  ),
 
   introducao: [
     "O Combo de Depilação foi criado para quem deseja realizar os principais procedimentos corporais em uma única sessão, economizando tempo e dinheiro.",

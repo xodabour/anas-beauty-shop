@@ -1,3 +1,4 @@
+import { config } from "../config";
 export const saudeCapilar = {
   slug: "saude-capilar",
 
@@ -24,8 +25,9 @@ export const saudeCapilar = {
     "/images/services/saude-capilar.jpg",
   ],
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar um tratamento capilar.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar um horário para tratamento capilar."
+),
 
   introducao: [
     "A saúde dos fios começa com um diagnóstico correto. No Ana's Beauty Shop avaliamos cada cabelo para indicar o tratamento mais adequado.",

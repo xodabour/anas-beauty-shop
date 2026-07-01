@@ -1,3 +1,4 @@
+import { config } from "../config";
 export const depilacao = {
   slug: "depilacao",
 
@@ -24,8 +25,9 @@ export const depilacao = {
     "/images/services/depilacao.jpg",
   ],
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar um horário para depilação.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma depilação."
+),
 
   introducao: [
     "Na Ana's Beauty Shop, a depilação é realizada com atenção ao conforto, higiene e bem-estar da cliente.",

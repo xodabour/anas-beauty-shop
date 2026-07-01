@@ -1,4 +1,7 @@
-export const depilacaoAxila = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const depilacaoAxila: Procedimento = {
   slug: "depilacao-axila",
 
   categoria: "Depilação",
@@ -21,8 +24,9 @@ export const depilacaoAxila = {
 
   preco: "R$ 30,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar depilação de axila.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma depilação de axila."
+),
 
   introducao: [
     "A depilação de axila proporciona uma sensação prolongada de limpeza, conforto e bem-estar.",

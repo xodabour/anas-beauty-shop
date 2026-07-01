@@ -1,3 +1,4 @@
+import { config } from "../config";
 export const maquiagem = {
   slug: "maquiagem",
 
@@ -24,8 +25,9 @@ export const maquiagem = {
     "/images/services/maquiagem.jpg",
   ],
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar um horário para maquiagem.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar um horário para maquiagem."
+),
 
   introducao: [
     "No Ana's Beauty Shop, a maquiagem é pensada para valorizar sua beleza natural com sofisticação, técnica e acabamento elegante.",

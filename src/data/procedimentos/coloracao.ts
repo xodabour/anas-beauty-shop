@@ -1,4 +1,7 @@
-export const coloracao = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const coloracao: Procedimento = {
   slug: "coloracao",
 
   categoria: "Cabelo",
@@ -21,8 +24,9 @@ export const coloracao = {
 
   preco: "Sob avaliação",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma avaliação para coloração.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma coloração."
+),
 
   introducao: [
     "A coloração transforma o visual, renova a autoestima e valoriza a beleza natural.",

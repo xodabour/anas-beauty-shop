@@ -1,4 +1,7 @@
-export const designDeSobrancelhas = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const designDeSobrancelhas: Procedimento = {
   slug: "design-de-sobrancelhas",
 
   categoria: "Sobrancelhas",
@@ -22,8 +25,9 @@ export const designDeSobrancelhas = {
 
   preco: "R$ 50,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar um design de sobrancelhas.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar um design de sobrancelhas."
+),
 
   introducao: [
     "O design de sobrancelhas é um procedimento que valoriza o olhar através da modelagem personalizada dos fios, respeitando o formato natural do rosto.",

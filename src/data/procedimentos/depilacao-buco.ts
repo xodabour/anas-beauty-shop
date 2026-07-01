@@ -1,4 +1,7 @@
-export const depilacaoBuco = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const depilacaoBuco: Procedimento = {
   slug: "depilacao-buco",
 
   categoria: "Depilação",
@@ -21,8 +24,9 @@ export const depilacaoBuco = {
 
   preco: "R$ 35,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar depilação de buço.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma depilação do buço."
+),
 
   introducao: [
     "A depilação de buço é um procedimento rápido e delicado para remover os pelos da região acima dos lábios.",

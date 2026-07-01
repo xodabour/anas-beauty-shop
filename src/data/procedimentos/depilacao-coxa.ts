@@ -1,4 +1,7 @@
-export const depilacaoCoxa = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const depilacaoCoxa: Procedimento = {
   slug: "depilacao-coxa",
 
   categoria: "Depilação",
@@ -21,8 +24,9 @@ export const depilacaoCoxa = {
 
   preco: "R$ 60,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar depilação de coxa.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma depilação de coxa."
+),
 
   introducao: [
     "A depilação de coxa é indicada para quem deseja uma pele mais lisa, uniforme e com sensação prolongada de cuidado.",

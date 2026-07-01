@@ -1,4 +1,7 @@
-export const mechas = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const mechas: Procedimento = {
   slug: "mechas",
 
   categoria: "Cabelo",
@@ -21,8 +24,9 @@ export const mechas = {
 
   preco: "Sob avaliação",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma avaliação para mechas.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma avaliação de mechas."
+),
 
   introducao: [
     "As mechas são uma excelente opção para quem deseja iluminar o visual, criar profundidade nos fios e trazer mais movimento ao cabelo.",

@@ -1,4 +1,7 @@
-export const designDeSobrancelhasComHenna = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const designDeSobrancelhasComHenna: Procedimento = {
   slug: "design-de-sobrancelhas-com-henna",
 
   categoria: "Sobrancelhas",
@@ -22,8 +25,9 @@ export const designDeSobrancelhasComHenna = {
 
   preco: "R$ 65,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar um design de sobrancelhas com henna.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar um design de sobrancelhas com henna."
+),
 
   introducao: [
     "O design de sobrancelhas com henna é ideal para quem deseja corrigir pequenas falhas e conquistar um efeito mais marcado e harmonioso.",

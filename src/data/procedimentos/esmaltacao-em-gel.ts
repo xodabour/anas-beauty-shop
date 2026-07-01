@@ -1,4 +1,7 @@
-export const esmaltacaoEmGel = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const esmaltacaoEmGel: Procedimento = {
   slug: "esmaltacao-em-gel",
 
   categoria: "Unhas",
@@ -21,8 +24,9 @@ export const esmaltacaoEmGel = {
 
   preco: "R$ 90,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma esmaltação em gel.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma esmaltação em gel."
+),
 
   introducao: [
     "A esmaltação em gel é perfeita para quem busca unhas bonitas por mais tempo, com brilho intenso e excelente resistência.",

@@ -1,4 +1,7 @@
-export const terapiaPodal = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const terapiaPodal: Procedimento = {
   slug: "terapia-podal",
 
   categoria: "Unhas",
@@ -21,8 +24,9 @@ export const terapiaPodal = {
 
   preco: "R$ 95,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma terapia podal.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma terapia podal."
+),
 
   introducao: [
     "A terapia podal é um cuidado especializado voltado para a saúde, conforto e bem-estar dos pés.",

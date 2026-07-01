@@ -1,5 +1,5 @@
 import type { Procedimento } from "../../types/procedimento";
-
+import { config } from "../config";
 export const maquiagem: Procedimento = {
   slug: "maquiagem",
 
@@ -23,8 +23,9 @@ export const maquiagem: Procedimento = {
 
   preco: "R$ 150,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma maquiagem.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma maquiagem."
+),
 
   introducao: [
     "A maquiagem profissional é ideal para quem deseja valorizar a beleza e conquistar um acabamento impecável em ocasiões especiais.",

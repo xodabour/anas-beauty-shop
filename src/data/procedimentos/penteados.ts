@@ -1,4 +1,7 @@
-export const penteados = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const penteados: Procedimento = {
   slug: "penteados",
 
   categoria: "Cabelo",
@@ -21,8 +24,9 @@ export const penteados = {
 
   preco: "Sob avaliação",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar um penteado.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar um penteado."
+),
 
   introducao: [
     "Os penteados são ideais para quem deseja uma produção especial, elegante e bem finalizada para eventos importantes.",

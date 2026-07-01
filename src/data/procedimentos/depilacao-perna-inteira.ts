@@ -1,4 +1,7 @@
-export const depilacaoPernaInteira = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const depilacaoPernaInteira: Procedimento = {
   slug: "depilacao-perna-inteira",
 
   categoria: "Depilação",
@@ -21,8 +24,9 @@ export const depilacaoPernaInteira = {
 
   preco: "R$ 85,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma depilação de perna inteira.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma depilação de perna inteira."
+),
 
   introducao: [
     "A depilação de perna inteira remove os pelos de toda a extensão das pernas, proporcionando uma pele mais lisa e uma sensação prolongada de conforto.",

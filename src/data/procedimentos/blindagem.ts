@@ -1,4 +1,7 @@
-export const blindagem = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const blindagem: Procedimento = {
   slug: "blindagem",
 
   categoria: "Unhas",
@@ -21,8 +24,9 @@ export const blindagem = {
 
   preco: "R$ 120,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma blindagem de unhas.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar umas unhas."
+),
 
   introducao: [
     "A blindagem de unhas é indicada para quem deseja fortalecer as unhas naturais sem realizar alongamentos.",

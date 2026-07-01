@@ -1,4 +1,7 @@
-export const depilacaoVirilhaCompleta = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const depilacaoVirilhaCompleta: Procedimento = {
   slug: "depilacao-virilha-completa",
 
   categoria: "Depilação",
@@ -23,8 +26,9 @@ export const depilacaoVirilhaCompleta = {
 
   preco: "R$ 85,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar uma depilação de virilha completa.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma depilação de virilha completa."
+),
 
   introducao: [
     "A depilação de virilha completa proporciona uma sensação prolongada de limpeza, conforto e bem-estar.",

@@ -1,3 +1,4 @@
+import { config } from "../config";
 export const sobrancelhas = {
   slug: "sobrancelhas",
 
@@ -24,8 +25,9 @@ export const sobrancelhas = {
     "/images/services/sobrancelhas.jpg",
   ],
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar um horário para sobrancelhas.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar um horario para sobrancelhas."
+),
 
   introducao: [
     "No Ana's Beauty Shop, o design de sobrancelhas é feito com cuidado, precisão e atenção ao formato natural do rosto.",

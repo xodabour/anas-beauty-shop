@@ -1,4 +1,7 @@
-export const depilacaoGluteos = {
+import type { Procedimento } from "../../types/procedimento";
+import { config } from "../config";
+
+export const depilacaoGluteos: Procedimento = {
   slug: "depilacao-gluteos",
 
   categoria: "Depilação",
@@ -21,8 +24,9 @@ export const depilacaoGluteos = {
 
   preco: "R$ 50,00",
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar depilação de glúteos.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar uma depilação de gluteos."
+),
 
   introducao: [
     "A depilação de glúteos é indicada para quem deseja uma pele mais lisa, uniforme e com sensação prolongada de cuidado.",

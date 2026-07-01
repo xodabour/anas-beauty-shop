@@ -1,3 +1,4 @@
+import { config } from "../config";
 export const unhas = {
   slug: "unhas",
 
@@ -24,8 +25,9 @@ export const unhas = {
     "/images/services/unhas.jpg",
   ],
 
-  whatsapp:
-    "https://wa.me/5547991620575?text=Olá! Gostaria de agendar um horário para unhas.",
+  whatsapp: config.whatsapp(
+  "Olá! Gostaria de agendar um horário para unhas."
+),
 
   introducao: [
     "No Ana's Beauty Shop, o cuidado com as unhas é realizado com atenção aos detalhes, higiene e acabamento elegante.",
