@@ -1,0 +1,36 @@
+---
+import type { BeneficiosServicoData } from "../../types/componentes";
+import { ui } from "../../data/ui";
+
+interface Props {
+  servico: BeneficiosServicoData;
+}
+
+const { servico } = Astro.props as Props;
+---
+
+<section class={`bg-black ${ui.section}`}>
+  <div class={`${ui.container} text-center`}>
+    <span class={ui.eyebrow}>
+      Benefícios
+    </span>
+
+    <h2 class={`${ui.title} mt-4 mb-14`}>
+      Por que escolher este procedimento?
+    </h2>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+      {servico.beneficios.map((beneficio) => (
+        <div class={`${ui.card} p-6`}>
+          <div class="text-yellow-500 text-3xl mb-4">
+            ✓
+          </div>
+
+          <p class={ui.paragraph}>
+            {beneficio}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

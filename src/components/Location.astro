@@ -1,19 +1,24 @@
+---
+import { config } from "../data/config";
+import { ui } from "../data/ui";
+---
+
 <section
   id="localizacao"
-  class="bg-[#050505] text-white py-24 px-6"
+  class={`bg-[#050505] text-white ${ui.section}`}
 >
-  <div class="max-w-7xl mx-auto">
+  <div class={ui.container}>
 
     <div class="text-center mb-16">
-      <span class="text-[#8a561f] uppercase tracking-[0.35em] text-sm font-medium">
+      <span class={ui.eyebrow}>
         Nossa Localização
       </span>
 
-      <h2 class="font-luxury text-5xl md:text-6xl font-semibold text-[#8a561f] mt-4 mb-6">
-        Atendemos em Balneário Camboriú
+      <h2 class={`${ui.title} text-[#8a561f] mt-4 mb-6`}>
+        Atendemos em {config.cidade}
       </h2>
 
-      <p class="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed">
+      <p class={`${ui.paragraph} max-w-3xl mx-auto`}>
         Um espaço pensado para proporcionar conforto, sofisticação e momentos
         de cuidado em uma das cidades mais encantadoras de Santa Catarina.
       </p>
@@ -21,10 +26,8 @@
 
     <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-      <!-- Informações -->
       <div class="space-y-10">
 
-        <!-- Endereço -->
         <div class="flex gap-5 items-start">
           <div class="text-3xl text-yellow-500">
             📍
@@ -35,10 +38,8 @@
               Visite Nosso Espaço
             </h3>
 
-            <p class="text-gray-300 text-lg leading-relaxed">
-              Rua 1536, nº 719<br />
-              Centro - Balneário Camboriú - SC<br />
-              CEP: 88330-610
+            <p class={`${ui.paragraph} text-lg`}>
+              {config.endereco}
             </p>
 
             <p class="text-gray-400 mt-4 leading-relaxed">
@@ -48,7 +49,6 @@
           </div>
         </div>
 
-        <!-- Horário -->
         <div class="flex gap-5 items-start">
           <div class="text-3xl text-yellow-500">
             🕒
@@ -59,14 +59,13 @@
               Horário de Atendimento
             </h3>
 
-            <p class="text-gray-300 text-lg leading-relaxed">
-              Segunda a Sábado<br />
-              Das 09h às 19h
+            <p class={`${ui.paragraph} text-lg`}>
+              {config.horario.semana}<br />
+              {config.horario.sabado}
             </p>
           </div>
         </div>
 
-        <!-- WhatsApp -->
         <div class="flex gap-5 items-start">
           <div class="text-3xl text-yellow-500">
             📱
@@ -77,14 +76,15 @@
               Agendamentos
             </h3>
 
-            <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+            <p class={`${ui.paragraph} mb-6`}>
               Entre em contato pelo WhatsApp e reserve seu horário com nossa equipe.
             </p>
 
             <a
-              href="https://wa.me/554733663992?text=Olá! Gostaria de agendar um horário no Ana's Beauty Shop."
+              href={config.whatsapp("Olá! Gostaria de agendar um horário no Ana's Beauty Shop.")}
               target="_blank"
-              class="inline-block bg-yellow-500 text-black px-8 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-500/30"
+              rel="noopener noreferrer"
+              class={ui.buttonPrimary}
             >
               Agendar pelo WhatsApp
             </a>
@@ -93,12 +93,9 @@
 
       </div>
 
-      <!-- Mapa -->
-      <div
-        class="rounded-[2rem] overflow-hidden border border-yellow-500/20 shadow-2xl shadow-black/50"
-      >
+      <div class={ui.imageCard}>
         <iframe
-          src="https://www.google.com/maps?q=Rua+1536,+719,+Centro,+Balneário+Camboriú,+SC&output=embed"
+          src={config.googleMapsEmbed}
           width="100%"
           height="520"
           style="border:0;"

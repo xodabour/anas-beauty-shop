@@ -1,4 +1,7 @@
 ---
+import { config } from "../data/config";
+import { ui } from "../data/ui";
+
 const reasons = [
   {
     icon: "✧",
@@ -29,19 +32,19 @@ const reasons = [
 ---
 
 <section
-  class="bg-black text-white py-24 px-6"
+  class={`bg-black text-white ${ui.section}`}
 >
-  <div class="max-w-7xl mx-auto text-center">
+  <div class={`${ui.container} text-center`}>
 
-    <span class="text-yellow-500 uppercase tracking-[0.35em] text-sm font-medium">
+    <span class={ui.eyebrow}>
       Por que escolher
     </span>
 
-    <h2 class="font-luxury text-5xl md:text-6xl font-semibold text-white mt-4 mb-4">
-      Ana's Beauty Shop
+    <h2 class={`${ui.title} text-white mt-4 mb-4`}>
+      {config.nome}
     </h2>
 
-    <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-16 leading-relaxed">
+    <p class={`${ui.paragraph} max-w-2xl mx-auto mb-16`}>
       Entenda por que somos a escolha de quem busca sofisticação, cuidado e beleza com propósito.
     </p>
 
@@ -80,9 +83,10 @@ const reasons = [
     </div>
 
     <a
-      href="https://wa.me/5547991620575"
+      href={config.whatsapp("Olá! Gostaria de agendar um horário.")}
       target="_blank"
-      class="inline-block mt-16 bg-yellow-500 text-black px-10 py-4 rounded-full font-semibold hover:bg-yellow-400 hover:scale-105 transition-all duration-300"
+      rel="noopener noreferrer"
+      class={`${ui.buttonPrimary} mt-16`}
     >
       Agende sua experiência exclusiva
     </a>

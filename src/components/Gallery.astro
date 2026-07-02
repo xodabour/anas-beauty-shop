@@ -1,26 +1,29 @@
 ---
+import { config } from "../data/config";
+import { ui } from "../data/ui";
+
 const photos = [
-  { src: '/images/gallery/01.jpeg', type: 'unhas' },
-  { src: '/images/gallery/02.jpeg', type: 'unhas' },
-  { src: '/images/gallery/03.jpeg', type: 'unhas' },
-  { src: '/images/gallery/04.jpeg', type: 'cabelo' },
-  { src: '/images/gallery/05.jpeg', type: 'cabelo' },
-  { src: '/images/gallery/06.jpeg', type: 'cabelo' },
+  { src: "/images/gallery/01.jpeg", type: "unhas" },
+  { src: "/images/gallery/02.jpeg", type: "unhas" },
+  { src: "/images/gallery/03.jpeg", type: "unhas" },
+  { src: "/images/gallery/04.jpeg", type: "cabelo" },
+  { src: "/images/gallery/05.jpeg", type: "cabelo" },
+  { src: "/images/gallery/06.jpeg", type: "cabelo" },
 ];
 ---
 
 <section
   data-aos="zoom-in"
-  class="bg-black text-white py-24 px-6"
+  class={`bg-black text-white ${ui.section}`}
 >
-  <div class="max-w-7xl mx-auto">
+  <div class={ui.container}>
 
     <div class="text-center mb-16">
-      <span class="text-yellow-500 uppercase tracking-[0.3em] text-sm">
+      <span class={ui.eyebrowSmall}>
         Nossa Galeria
       </span>
 
-      <h2 class="font-luxury text-5xl md:text-6xl font-semibold mt-4">
+      <h2 class={`${ui.title} mt-4`}>
         Inspire-se com nossos trabalhos
       </h2>
     </div>
@@ -30,18 +33,18 @@ const photos = [
       {photos.map((photo) => (
         <div
           class={`relative rounded-3xl overflow-hidden group ${
-            photo.type === 'cabelo'
-              ? 'h-[500px]'
-              : 'h-[260px]'
+            photo.type === "cabelo"
+              ? "h-[500px]"
+              : "h-[260px]"
           }`}
         >
           <img
             src={photo.src}
-            alt="Ana's Beauty Shop"
+            alt={config.nome}
             class={`w-full h-full group-hover:scale-110 transition duration-700 ${
-              photo.type === 'cabelo'
-                ? 'object-cover object-top'
-                : 'object-cover'
+              photo.type === "cabelo"
+                ? "object-cover object-top"
+                : "object-cover"
             }`}
           />
 

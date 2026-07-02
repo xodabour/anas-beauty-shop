@@ -1,20 +1,25 @@
+---
+import { config } from "../data/config";
+import { ui } from "../data/ui";
+---
+
 <section
   id="sobre"
-  class="bg-[#111111] text-white py-24 px-6"
+  class={`bg-[#111111] text-white ${ui.section}`}
 >
-  <div class="max-w-5xl mx-auto text-center">
-    <span class="text-yellow-500 uppercase tracking-[0.3em] text-sm">
+  <div class={`${ui.containerSmall} text-center`}>
+    <span class={ui.eyebrowSmall}>
       Sobre o salão
     </span>
 
-    <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-6">
+    <h2 class={`${ui.title} mt-4 mb-6`}>
       Beleza com elegância e cuidado
     </h2>
 
-    <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-      O Ana's Beauty Shop é um espaço criado para valorizar sua beleza,
+    <p class={`${ui.paragraph} max-w-3xl mx-auto`}>
+      O {config.nome} é um espaço criado para valorizar sua beleza,
       autoestima e bem-estar, oferecendo um atendimento acolhedor em
-      Balneário Camboriú - SC.
+      {config.cidade} - {config.estado}.
     </p>
   </div>
 </section>

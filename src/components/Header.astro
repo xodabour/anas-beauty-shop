@@ -1,8 +1,13 @@
+---
+import { config } from "../data/config";
+import { ui } from "../data/ui";
+---
+
 <header
   id="siteHeader"
   class="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-yellow-500/10 transition-all duration-300"
 >
-  <div class="max-w-7xl mx-auto px-6 py-4">
+  <div class={`${ui.container} py-4`}>
     <div class="grid grid-cols-3 items-center">
       <nav class="hidden md:flex items-center gap-8 text-white font-medium">
         <a href="/" class="hover:text-yellow-500 transition">Início</a>
@@ -14,7 +19,7 @@
         <a href="/">
           <img
             src="/images/logo-dourada.png"
-            alt="Ana's Beauty Shop"
+            alt={config.nome}
             class="h-16 object-contain"
           />
         </a>
@@ -24,8 +29,9 @@
         <a href="/#sobre" class="hover:text-yellow-500 transition">Sobre Nós</a>
 
         <a
-          href="https://www.instagram.com/anas_beautyshop"
+          href={config.instagram}
           target="_blank"
+          rel="noopener noreferrer"
           class="hover:text-yellow-500 transition"
         >
           Instagram
@@ -56,7 +62,7 @@
     <div class="flex items-center justify-between px-7 py-6 border-b border-yellow-500/20">
       <img
         src="/images/logo-dourada.png"
-        alt="Ana's Beauty Shop"
+        alt={config.nome}
         class="h-14 object-contain"
       />
 
@@ -81,8 +87,9 @@
       <a href="/#sobre" class="mobile-link text-white hover:text-yellow-500 transition">Sobre Nós</a>
 
       <a
-        href="https://www.instagram.com/anas_beautyshop"
+        href={config.instagram}
         target="_blank"
+        rel="noopener noreferrer"
         class="mobile-link text-white hover:text-yellow-500 transition"
       >
         Instagram
@@ -91,9 +98,10 @@
       <a href="/#contato" class="mobile-link text-white hover:text-yellow-500 transition">Contato</a>
 
       <a
-        href="https://wa.me/5547991620575?text=Olá! Gostaria de agendar um horário no Ana's Beauty Shop."
+        href={config.whatsapp("Olá! Gostaria de agendar um horário no Ana's Beauty Shop.")}
         target="_blank"
-        class="bg-yellow-500 text-black px-6 py-4 rounded-full text-center font-bold mt-3 shadow-xl shadow-yellow-500/20"
+        rel="noopener noreferrer"
+        class={ui.buttonPrimary}
       >
         Agendar pelo WhatsApp
       </a>

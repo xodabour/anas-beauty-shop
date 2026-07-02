@@ -1,23 +1,27 @@
-<section class="bg-black text-white py-24 px-6">
-  <div class="max-w-7xl mx-auto">
+---
+import { config } from "../../data/config";
+import { ui } from "../../data/ui";
+---
 
+<section class={`bg-black text-white ${ui.section}`}>
+  <div class={ui.container}>
     <div class="text-center mb-14">
-      <span class="text-yellow-500 uppercase tracking-[0.35em] text-sm">
+      <span class={ui.eyebrow}>
         Localização
       </span>
 
-      <h2 class="font-luxury text-4xl md:text-5xl font-semibold mt-4">
-        Estamos em Balneário Camboriú
+      <h2 class={`${ui.title} mt-4`}>
+        Estamos em {config.cidade}
       </h2>
 
-      <p class="text-gray-300 mt-6 max-w-3xl mx-auto text-lg">
-        Atendemos na Rua 1536, nº 719, Centro, Balneário Camboriú - SC.
+      <p class={`${ui.paragraph} mt-6 max-w-3xl mx-auto`}>
+        Atendemos na {config.endereco}.
       </p>
     </div>
 
-    <div class="rounded-3xl overflow-hidden border border-yellow-500/20 shadow-2xl shadow-black/50">
+    <div class={ui.imageCard}>
       <iframe
-        src="https://www.google.com/maps?q=Rua+1536,+719,+Centro,+Balneário+Camboriú,+SC&output=embed"
+        src={config.googleMapsEmbed}
         width="100%"
         height="450"
         style="border:0;"
@@ -25,6 +29,5 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
-
   </div>
 </section>

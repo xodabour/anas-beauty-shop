@@ -1,37 +1,40 @@
 ---
-const { servico } = Astro.props;
+import type { IntroducaoServicoData } from "../../types/componentes";
+import { ui } from "../../data/ui";
+
+interface Props {
+  servico: IntroducaoServicoData;
+}
+
+const { servico } = Astro.props as Props;
 ---
 
-<section class="bg-[#080808] text-white py-20 px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
+<section class={`bg-[#080808] ${ui.sectionAlt}`}>
+  <div class={`${ui.containerMedium} grid lg:grid-cols-2 gap-12 items-center`}>
+    <div>
+      <span class={ui.eyebrowSmall}>
+        Sobre o procedimento
+      </span>
 
-      <div>
-        <span class="text-yellow-500 uppercase tracking-[0.3em] text-sm">
-          Sobre o serviço
-        </span>
+      <h2 class={`${ui.title} mt-4 mb-8`}>
+        {servico.nome} no Ana's Beauty Shop
+      </h2>
 
-        <h2 class="font-luxury text-4xl md:text-5xl font-semibold mt-4 mb-8">
-          Cuidados especiais para {servico.nome.toLowerCase()}
-        </h2>
-
-        <div class="space-y-6">
-          {servico.introducao.map((paragrafo: string) => (
-            <p class="text-gray-300 text-lg leading-relaxed">
-              {paragrafo}
-            </p>
-          ))}
-        </div>
+      <div class="space-y-6">
+        {servico.introducao.map((paragrafo) => (
+          <p class={ui.paragraph}>
+            {paragrafo}
+          </p>
+        ))}
       </div>
+    </div>
 
-      <div class="rounded-3xl overflow-hidden border border-yellow-500/20 shadow-2xl shadow-black/50">
-        <img
-          src={servico.imagemDestaque}
-          alt={servico.titulo}
-          class="w-full h-[360px] md:h-[460px] object-cover"
-        />
-      </div>
-
+    <div class={ui.imageCard}>
+      <img
+        src={servico.imagemDestaque}
+        alt={servico.nome}
+        class="w-full h-[360px] md:h-[460px] object-cover"
+      />
     </div>
   </div>
 </section>

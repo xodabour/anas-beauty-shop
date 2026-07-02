@@ -1,3 +1,8 @@
+---
+import { config } from "../data/config";
+import { ui } from "../data/ui";
+---
+
 <section
   id="inicio"
   class="relative min-h-screen overflow-hidden bg-black md:flex md:items-center"
@@ -13,38 +18,36 @@
 
   <!-- Mobile -->
   <div class="md:hidden pt-24 bg-black">
-    <!-- Foto da equipe -->
     <div class="relative bg-black flex justify-center items-center px-4 overflow-hidden">
       <img
         src="/images/hero-salao.png"
-        alt="Equipe Ana's Beauty Shop"
+        alt={`Equipe ${config.nome}`}
         class="w-full max-h-[520px] object-contain"
       />
 
-      <!-- Gradiente maior e mais suave -->
       <div
         class="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-black via-black/80 to-transparent"
       ></div>
     </div>
 
-    <!-- Conteúdo -->
     <div class="bg-black text-center px-7 pb-16 -mt-16 relative z-10">
       <span class="text-yellow-400 uppercase tracking-[0.35em] text-xs font-medium">
-        ANA'S BEAUTY SHOP
+        {config.nome}
       </span>
 
       <h1 class="font-luxury text-white text-4xl font-semibold leading-tight mt-5 mb-6">
         Sua beleza merece a melhor das experiências
       </h1>
 
-      <p class="text-gray-300 text-lg leading-relaxed mb-8">
+      <p class={`${ui.paragraph} mb-8`}>
         Cada detalhe é pensado para realçar sua essência com sofisticação,
         cuidado e elegância.
       </p>
 
       <a
-        href="https://wa.me/5547991620575"
+        href={config.whatsapp("Olá! Gostaria de agendar um horário.")}
         target="_blank"
+        rel="noopener noreferrer"
         class="inline-block w-full bg-yellow-500 text-black px-8 py-4 rounded-full font-bold uppercase shadow-xl shadow-yellow-500/25"
       >
         Agende sua experiência
@@ -53,30 +56,27 @@
   </div>
 
   <!-- Desktop -->
-  <div class="hidden md:block relative z-10 max-w-7xl mx-auto px-8 w-full">
+  <div class={`hidden md:block relative z-10 ${ui.container} px-8 w-full`}>
     <div class="max-w-4xl">
       <span class="text-yellow-400 uppercase tracking-[0.45em] text-sm font-medium">
-        ANA'S BEAUTY SHOP
+        {config.nome}
       </span>
 
-      <h1
-        class="font-luxury text-white text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mt-6 max-w-4xl"
-      >
+      <h1 class="font-luxury text-white text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.1] mt-6 max-w-4xl">
         Sua beleza merece uma experiência inesquecível.
       </h1>
 
-      <p
-        class="text-gray-200 text-lg md:text-xl mt-8 mb-12 max-w-2xl leading-relaxed"
-      >
+      <p class={`${ui.paragraph} md:text-xl mt-8 mb-12 max-w-2xl`}>
         Sofisticação, elegância e bem-estar em um ambiente pensado para você em
-        Balneário Camboriú.
+        {config.cidade}.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-5">
         <a
-          href="https://wa.me5547991620575"
+          href={config.whatsapp("Olá! Gostaria de agendar um horário.")}
           target="_blank"
-          class="bg-yellow-500 text-black px-10 py-4 rounded-full font-semibold text-center hover:bg-yellow-400 hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-500/30"
+          rel="noopener noreferrer"
+          class={ui.buttonPrimary}
         >
           Agendar pelo WhatsApp
         </a>

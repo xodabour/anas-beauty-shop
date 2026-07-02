@@ -1,4 +1,6 @@
 ---
+import { ui } from "../data/ui";
+
 const services = [
   {
     title: "Cabelo",
@@ -41,19 +43,19 @@ const services = [
 
 <section
   id="servicos"
-  class="bg-black text-white py-24 px-6"
+  class={`bg-black text-white ${ui.section}`}
 >
-  <div class="max-w-7xl mx-auto text-center">
+  <div class={`${ui.container} text-center`}>
 
-    <span class="text-[#8a561f] uppercase tracking-[0.35em] text-sm font-medium">
+    <span class={ui.eyebrow}>
       Nossos Serviços
     </span>
 
-    <h2 class="font-luxury text-5xl md:text-6xl font-semibold text-[#8a561f] mt-4 mb-4">
+    <h2 class={`${ui.title} text-[#8a561f] mt-4 mb-4`}>
       Nossos Serviços
     </h2>
 
-    <p class="max-w-3xl mx-auto text-lg text-gray-300 mb-14 leading-relaxed">
+    <p class={`${ui.paragraph} max-w-3xl mx-auto mb-14`}>
       Do cabelo à depilação, cada detalhe é cuidado com sofisticação, produtos de alta performance e profissionais que entendem o seu estilo.
     </p>
 
@@ -65,7 +67,7 @@ const services = [
         >
           <article class="h-full">
 
-            <div class="overflow-hidden rounded-2xl mb-6 border border-yellow-500/20 shadow-2xl shadow-black/40">
+            <div class={`${ui.imageCard} mb-6`}>
               <img
                 src={service.image}
                 alt={service.title}
@@ -77,13 +79,11 @@ const services = [
               {service.title}
             </h3>
 
-            <p class="text-lg leading-relaxed text-gray-300 mb-6">
+            <p class={`${ui.paragraph} mb-6`}>
               {service.text}
             </p>
 
-            <span
-              class="inline-flex items-center gap-2 text-yellow-400 font-semibold group-hover:text-yellow-300 transition"
-            >
+            <span class="inline-flex items-center gap-2 text-yellow-400 font-semibold group-hover:text-yellow-300 transition">
               Saiba mais
               <span class="group-hover:translate-x-1 transition-transform">
                 →

@@ -1,21 +1,25 @@
-<section class="bg-[#111111] text-white py-24 px-6">
-  <div class="max-w-6xl mx-auto">
+---
+import { ui } from "../data/ui";
+---
+
+<section class={`bg-[#111111] text-white ${ui.section}`}>
+  <div class={ui.containerMedium}>
 
     <div class="text-center mb-16">
-      <span class="text-yellow-500 uppercase tracking-[0.3em] text-sm">
+      <span class={ui.eyebrowSmall}>
         Depoimentos
       </span>
 
-      <h2 class="text-4xl md:text-5xl font-bold mt-4">
+      <h2 class={`${ui.title} mt-4`}>
         O que nossas clientes dizem
       </h2>
 
-      <p class="text-gray-300 mt-4 text-lg">
+      <p class={`${ui.paragraph} mt-4`}>
         Avaliações reais de clientes no Google
       </p>
     </div>
 
-    <div class="bg-black rounded-3xl border border-yellow-500/20 p-4 md:p-8">
+    <div class={ui.imageCard}>
       <!-- Elfsight Google Reviews | Ana's Beauty Shop Reviews -->
       <script
         is:inline

@@ -20,8 +20,14 @@ export const config = {
 
   site: "https://www.anasbeautyshop.com.br",
 
+  googleMapsEmbed:
+    "https://www.google.com/maps?q=Rua+1536,+719,+Centro,+Balneário+Camboriú,+SC&output=embed",
+
+  googleMaps:
+    "https://maps.google.com/?q=Rua+1536,+719,+Centro,+Balneário+Camboriú,+SC",
+
   horario: {
     semana: "Terça a sexta, das 9h às 19h",
     sabado: "Sábado, das 9h às 17h",
   },
-};
+} as const;

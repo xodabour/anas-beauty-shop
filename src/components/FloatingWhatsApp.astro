@@ -1,6 +1,13 @@
+---
+import { config } from "../data/config";
+---
+
 <a
-  href="https://wa.me/5547991620575?text=Olá! Encontrei o site da Ana's Beauty Shop e gostaria de agendar um horário."
+  href={config.whatsapp(
+    "Olá! Encontrei o site da Ana's Beauty Shop e gostaria de agendar um horário."
+  )}
   target="_blank"
+  rel="noopener noreferrer"
   aria-label="Agendar pelo WhatsApp"
   class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] shadow-2xl shadow-black/40 hover:scale-110 transition-transform duration-300"
 >
